@@ -13,8 +13,6 @@
   <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
 </ons-splitter>
 
-
-
 <template id="settings.html">
   <ons-page>
     <ons-toolbar>
@@ -54,66 +52,57 @@
         </ons-toolbar-button>
       </div>
     </ons-toolbar>
-    <ons-navigator animation="slide" swipeable id="myNavigator" page="page1.html"></ons-navigator>
-    <template id="page1.html">
-      <ons-page id="page1">
+    <ons-navigator animation="slide" swipeable id="LLLNavigator" page="LLLActivities.html"></ons-navigator>
+    <template id="LLLActivities.html">
+      <ons-page id="LLLActivities">
         <ons-toolbar style="height:100px">
           <div class="center" style="height:200%"><h1>Lifelong Learning</h1></div>
       </ons-toolbar>
-
-      <p>This is the first page.</p>
-      <ons-list-header>Lifelong Learning activities</ons-list-header>
-      <ons-list-item id="chevronclick" modifier="chevron" tappable>
+      <p>Lifelong Learning Activities</p>
+      <ons-list-header>Lifelong Learning Activities</ons-list-header>
+      <ons-list-item id="LLLFirst" modifier="chevron" tappable>
         <div>
-        <p>First Activity</p>
-        <img src="https://www.w3schools.com/images/lamp.jpg">
+        <p>Learn how to use Youtube to keep yourself occupied during COVID-19</p>
         </div>
       </ons-list-item>
-      <ons-list-item id="chevronclick2" modifier="chevron" tappable>Second Activity</ons-list-item>
+      <ons-list-item id="LLLSecond" modifier="chevron" tappable>Learn to use Zoom to stay connected with your friends and family</ons-list-item>
+      <ons-list-item id="LLLThird" modifier="chevron" tappable>Learn more digital skills online</ons-list-item>
 
     </ons-page>
   </template>
 
-  <template id="page2.html">
-    <ons-page id="page2">
+  <template id="LLLActivity1.html">
+    <ons-page id="LLLActivity1">
       <ons-toolbar>
-        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="left"><ons-back-button>Back to Lifelong Learning Activities</ons-back-button></div>
         <div class="center"></div>
       </ons-toolbar>
 
-      <p>Second Page</p>
+      <p>Learn how to use Youtube to keep yourself occupied during COVID-19</p>
     </ons-page>
   </template>
 
-  <template id="page3.html">
-    <ons-page id="page3">
+  <template id="LLLActivity2.html">
+    <ons-page id="LLLActivity2">
       <ons-toolbar>
-        <div class="left"><ons-back-button>Page 3</ons-back-button></div>
+        <div class="left"><ons-back-button>Back to Lifelong Learning Activities</ons-back-button></div>
         <div class="center"></div>
       </ons-toolbar>
 
-      <p>This is the third page.</p>
+      <p>Learn to use Zoom to stay connected with your friends and family</p>
     </ons-page>
   </template>
-    <!--
-    <ons-list>
-      <ons-list-header>Resources</ons-list-header>
-      <ons-list-item>
-        <span class="list-item__title">How to use youtube</span><span class="list-item__subtitle">https://www.wikihow.com/Play-YouTube-Videos</span>
-      </ons-list-item>
-      <ons-list-item>
-        <span class="list-item__title">How to use youtube (Chinese)</span><span class="list-item__subtitle">https://zh.wikihow.com/%E5%9C%A8YouTube%E4%B8%8A%E7%9C%8B%E8%A7%86%E9%A2%91</span>
-      </ons-list-item>
-      <ons-list-item>
-        <span class="list-item__title">Learn digital skills online</span><span class="list-item__subtitle">https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/overview/</span>
-      </ons-list-item>
-      <ons-list-item>
-        <span class="list-item__title">How to use Zoom (Chinese)</span><span class="list-item__subtitle">https://zoomnow.net/zntw_zoom_step_by_step.php</span>
-      </ons-list-item>
-      <ons-list-item>
-        <span class="list-item__title">How to use Zoom (Melayu)</span><span class="list-item__subtitle">https://blog.payrollbozz.com/cara-menggunakan-zoom-meeting/</span>
-      </ons-list-item>
-    </ons-list> -->
+
+  <template id="LLLActivity3.html">
+    <ons-page id="LLLActivity3">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Lifelong Learning Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>Learn more digital skills online</p>
+    </ons-page>
+  </template>
   </ons-page>
 </template>
 
@@ -125,10 +114,69 @@
           <ons-icon icon="md-menu"></ons-icon>
         </ons-toolbar-button>
       </div>
-      <div class="center">
-        Health & Wellness
-      </div>
     </ons-toolbar>
+
+    <ons-navigator animation="slide" swipeable id="HWNavigator" page="HWActivities.html"></ons-navigator>
+    <template id="HWActivities.html">
+      <ons-page id="HWActivities">
+        <ons-toolbar style="height:100px">
+          <div class="center" style="height:200%"><h1>Health & Wellness</h1></div>
+      </ons-toolbar>
+
+      <p>This is the first page.</p>
+      <ons-list-header>Health & Wellness Activities</ons-list-header>
+      <ons-list-item id="HWFirst" modifier="chevron" tappable><p>Get Fit With Me</p></ons-list-item>
+      <ons-list-item id="HWSecond" modifier="chevron" tappable>HPB Workout</ons-list-item>
+      <ons-list-item id="HWThird" modifier="chevron" tappable>More Exercise Video</ons-list-item>
+
+    </ons-page>
+  </template>
+
+  <template id="HWActivity1.html">
+    <ons-page id="HWActivity1">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Health & Wellness Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p>“Get Fit With Me – Overcome COVID-19”</p>
+        <ul>
+          <li>Channel 8 (weekdays 10am to 3pm)</li>
+          <li>Suria and Vasantham (Monday, Wednesday and Friday at 3.30pm)</li>
+          <li>Love 97.2 Facebook Live (Monday, Wednesday and Friday at 2pm)</li>
+        </ul>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="HWActivity2.html">
+    <ons-page id="HWActivity2">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Health & Wellness Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p> HPB Workout Video</p>
+        <iframe width=100% height=100% src="https://www.youtube.com/embed/4UCkKDlXYk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="HWActivity3.html">
+    <ons-page id="HWActivity3">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Health & Wellness Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p> More Exercise Video <p>
+          <iframe width=100% height=100% src="https://www.youtube.com/embed/8CE4ijWlQ18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+    </ons-page>
+  </template>
+
   </ons-page>
 </template>
 
@@ -141,12 +189,35 @@
           <ons-icon icon="md-menu"></ons-icon>
         </ons-toolbar-button>
       </div>
-      <div class="center">
-        Cooking
-      </div>
     </ons-toolbar>
+    <ons-navigator animation="slide" swipeable id="CookNavigator" page="CookingActivities.html"></ons-navigator>
+    <template id="CookingActivities.html">
+      <ons-page id="CookingActivities">
+        <ons-toolbar style="height:100px">
+          <div class="center" style="height:200%"><h1>Cooking Activities</h1></div>
+      </ons-toolbar>
+
+      <p>Cooking Activities</p>
+      <ons-list-header>Cooking Activities</ons-list-header>
+      <ons-list-item id="CookingFirst" modifier="chevron" tappable>
+      <p>HPB Healthier Recipes</p>
+      </ons-list-item>
+    </ons-page>
+  </template>
+
+  <template id="CookingActivity1.html">
+    <ons-page id="CookingActivity1">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Cooking Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>HPB Healthier Recipes</p>
+    </ons-page>
+  </template>
   </ons-page>
 </template>
+
 
 <template id="activity-lei.html">
   <ons-page>
@@ -156,10 +227,57 @@
           <ons-icon icon="md-menu"></ons-icon>
         </ons-toolbar-button>
       </div>
-      <div class="center">
-        Leisure
-      </div>
     </ons-toolbar>
+
+    <ons-navigator animation="slide" swipeable id="LeiNavigator" page="LeiActivities.html"></ons-navigator>
+    <template id="LeiActivities.html">
+      <ons-page id="LeiActivities">
+        <ons-toolbar style="height:100px">
+          <div class="center" style="height:200%"><h1>Leisure</h1></div>
+        </ons-toolbar>
+        <p>Leisure Activities</p>
+        <ons-list-header>Leisure Activities</ons-list-header>
+        <ons-list-item id="LeiFirst" modifier="chevron" tappable>
+          <p>Come n’ Live @ Zaobao.sg</p>
+        </ons-list-item>
+        <ons-list-item id="LeiSecond" modifier="chevron" tappable>PA e-courses</ons-list-item>
+        <ons-list-item id="LeiThird" modifier="chevron" tappable>Another Leisure Video</ons-list-item>
+    </ons-page>
+  </template>
+
+  <template id="LeiActivity1.html">
+    <ons-page id="LeiActivity1">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>Zaobao</p>
+    </ons-page>
+  </template>
+
+  <template id="LeiActivity2.html">
+    <ons-page id="LeiActivity2">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>PA e-courses</p>
+    </ons-page>
+  </template>
+
+  <template id="LeiActivity3.html">
+    <ons-page id="LeiActivity3">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>Leisure activities</p>
+    </ons-page>
+  </template>
+
   </ons-page>
 </template>
 
@@ -171,10 +289,92 @@
           <ons-icon icon="md-menu"></ons-icon>
         </ons-toolbar-button>
       </div>
-      <div class="center">
-        Mental Well-being
-      </div>
     </ons-toolbar>
+
+    <ons-navigator animation="slide" swipeable id="MWNavigator" page="MWActivities.html"></ons-navigator>
+    <template id="MWActivities.html">
+      <ons-page id="MWActivities">
+        <ons-toolbar style="height:100px">
+          <div class="center" style="height:200%"><h1>Mental Wellness</h1></div>
+        </ons-toolbar>
+        <p>This is the first page.</p>
+        <ons-list-header>Mental Wellness Activities</ons-list-header>
+        <ons-list-item id="MWFirst" modifier="chevron" tappable>First Activity</ons-list-item>
+        <ons-list-item id="MWSecond" modifier="chevron" tappable>Second Activity</ons-list-item>
+        <ons-list-item id="MWThird" modifier="chevron" tappable>Third Activity</ons-list-item>
+    </ons-page>
+  </template>
+
+  <template id="MWActivity1.html">
+    <ons-page id="MWActivity1">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Mental Wellness Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p>7 Easy Tips for Better Mental Wellbeing</p>
+        <br>
+        <p>Mental wellbeing relates to our ability to positively experience life, effectively manage life's challenges, realise our potential and make a meaningful contribution within our community</p>
+        <br>
+        <img src="https://www.healthhub.sg/sites/assets/Assets/Article%20Images/mental-wellbeing-tips.jpg" width="100%">
+        <p>Having good mental wellbeing helps us to deal with challenges, solve problems and achieve our goals. Maintaining good mental wellbeing also reduces our vulnerability to mental health difficulties and challenges in life. Here are seven easy tips for better mental wellbeing:</p>
+        <br>
+        <h3>1. Exercise Regularly</h3>
+        <br>
+        <p>Exercising releases “happy hormones” into your body. For instance, you can take the stairs instead of the lift.</p>
+        <br>
+        <h3>2. Do More of What Makes You Happy</h3>
+        <br>
+        <p>Take a break to do what you enjoy can refresh you to better handle your problems.</p>
+        <br>
+        <h3>3. Manage Your Time</h3>
+        <p>Plan your time well so that you can complete your tasks on time. Break large tasks into smaller manageable parts.</p>
+        <br>
+        <h3>4. Speak to Someone</h3>
+        <p>Seeking help is not a sign of weakness. Share your worries with someone you trust.</p>
+        <br>
+        <h3>5. Think Positive</h3>
+        <p>Changing your mindset and having a positive attitude can make you happier.</p>
+        <br>
+        <h3>6. Sleep Well</h3>
+        <p>Getting enough sleep (7 to 9 hours daily for an adult) is key to better concentration and focus.</p>
+        <br>
+        <h3>7. Practise Deep Breathing</h3>
+        <p>Breathe in deeply through your nose for 5 counts and breathe out slowly for 5 counts.</p>
+        <br>
+        <p>Besides the above tips, you can learn some relaxation techniques to help you cope with the stresses of everyday life. Follow this video to learn how to practise progressive muscle relaxation.</p>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="MWActivity2.html">
+    <ons-page id="MWActivity2">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Mental Wellness Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p>5-Minute Meditation You Can Do Anywhere</p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/inpok4MKVLM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="MWActivity3.html">
+    <ons-page id="MWActivity3">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Mental Wellness Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p>Progressive Muscle Relaxation</p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MGxk12mI4t8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </ons-page>
+  </template>
   </ons-page>
 </template>
 
