@@ -14,6 +14,7 @@
 </ons-splitter>
 
 
+
 <template id="settings.html">
   <ons-page>
     <ons-toolbar>
@@ -52,10 +53,49 @@
           <ons-icon icon="md-menu"></ons-icon>
         </ons-toolbar-button>
       </div>
-      <div class="center">
-        Life-Long Learning
-      </div>
     </ons-toolbar>
+    <ons-navigator animation="slide" swipeable id="myNavigator" page="page1.html"></ons-navigator>
+    <template id="page1.html">
+      <ons-page id="page1">
+        <ons-toolbar style="height:100px">
+          <div class="center" style="height:200%"><h1>Lifelong Learning</h1></div>
+      </ons-toolbar>
+
+      <p>This is the first page.</p>
+      <ons-list-header>Lifelong Learning activities</ons-list-header>
+      <ons-list-item id="chevronclick" modifier="chevron" tappable>
+        <div>
+        <p>First Activity</p>
+        <img src="https://www.w3schools.com/images/lamp.jpg">
+        </div>
+      </ons-list-item>
+      <ons-list-item id="chevronclick2" modifier="chevron" tappable>Second Activity</ons-list-item>
+
+    </ons-page>
+  </template>
+
+  <template id="page2.html">
+    <ons-page id="page2">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>Second Page</p>
+    </ons-page>
+  </template>
+
+  <template id="page3.html">
+    <ons-page id="page3">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 3</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>This is the third page.</p>
+    </ons-page>
+  </template>
+    <!--
     <ons-list>
       <ons-list-header>Resources</ons-list-header>
       <ons-list-item>
@@ -73,7 +113,7 @@
       <ons-list-item>
         <span class="list-item__title">How to use Zoom (Melayu)</span><span class="list-item__subtitle">https://blog.payrollbozz.com/cara-menggunakan-zoom-meeting/</span>
       </ons-list-item>
-    </ons-list>
+    </ons-list> -->
   </ons-page>
 </template>
 
