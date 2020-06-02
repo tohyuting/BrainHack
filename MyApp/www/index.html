@@ -1,49 +1,193 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+</head>
+<body>
+<ons-splitter>
+  <ons-splitter-side page="menu.html" id="menu" side="left" width="220px" collapse swipeable>
+
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+
+<template id="settings.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Settingsasdasd
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="covid.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Latest COVID-19 news
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="activity-lll.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Life-Long Learning
+      </div>
+    </ons-toolbar>
+    <ons-list>
+      <ons-list-header>Resources</ons-list-header>
+      <ons-list-item>
+        <span class="list-item__title">How to use youtube</span><span class="list-item__subtitle">https://www.wikihow.com/Play-YouTube-Videos</span>
+      </ons-list-item>
+      <ons-list-item>
+        <span class="list-item__title">How to use youtube (Chinese)</span><span class="list-item__subtitle">https://zh.wikihow.com/%E5%9C%A8YouTube%E4%B8%8A%E7%9C%8B%E8%A7%86%E9%A2%91</span>
+      </ons-list-item>
+      <ons-list-item>
+        <span class="list-item__title">Learn digital skills online</span><span class="list-item__subtitle">https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/overview/</span>
+      </ons-list-item>
+      <ons-list-item>
+        <span class="list-item__title">How to use Zoom (Chinese)</span><span class="list-item__subtitle">https://zoomnow.net/zntw_zoom_step_by_step.php</span>
+      </ons-list-item>
+      <ons-list-item>
+        <span class="list-item__title">How to use Zoom (Melayu)</span><span class="list-item__subtitle">https://blog.payrollbozz.com/cara-menggunakan-zoom-meeting/</span>
+      </ons-list-item>
+    </ons-list>
+  </ons-page>
+</template>
+
+<template id="activity-hw.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Health & Wellness
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+
+<template id="activity-cook.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Cooking
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="activity-lei.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Leisure
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="activity-mw.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Mental Well-being
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="help.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Help
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        About asdasd
+      </div>
+    </ons-toolbar>
+    <p style="text-align: center; padding-top: 20px;">this is the about page test </p>
+    <p style="text-align: left">
+      <ons-button>Click me1!</ons-button>
+    </p>
+    <p style="text-align: center">
+      <ons-button>Click me2!</ons-button>
+    </p>
+    <ons-button modifier="large">large</ons-button>
+    <p>
+      <ons-icon icon="md-zoom-in"></ons-icon>
+    </p>
+    <section style="padding: 100px">
+      <ons-button modifier="quiet">quiet</ons-button>
+      <ons-button>Default</ons-button>
+      <p></p>
+      <ons-button modifier="large--quiet">large--quiet / material--flat</ons-button>
+      <p></p>
+      <ons-button modifier="large">large</ons-button>
+    </section>
+
+  </ons-page>
+</template>
+
+<script src="js/test.js"></script>
+</body>
 </html>
