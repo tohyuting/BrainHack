@@ -15,15 +15,44 @@ window.fn.load = function(page) {
 document.addEventListener('init', function(event) {
   var page = event.target;
 
+  if (page.id === 'CovidNews') {
+    page.querySelector('#CovidFirst').onclick = function() {
+      document.querySelector('#CovidNavigator').pushPage('CovidNews1.html', {data: {title: 'New Cases of Covid-19'}});
+    };
+    page.querySelector('#CovidSecond').onclick = function() {
+      document.querySelector('#CovidNavigator').pushPage('CovidNews2.html', {data: {title: 'Resumption of Construction'}});
+    };
+    page.querySelector('#CovidThird').onclick = function() {
+      document.querySelector('#CovidNavigator').pushPage('CovidNews3.html', {data: {title: 'COVID-19 Laws in Force'}});
+    };
+    page.querySelector('#CovidFourth').onclick = function() {
+      document.querySelector('#CovidNavigator').pushPage('CovidNews4.html', {data: {title: 'Official MOH Twitter'}});
+    };
+  } else if (page.id === 'CovidNews1') {
+    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+  } else if (page.id === 'CovidNews2') {
+    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+  } else if (page.id === 'CovidNews3') {
+    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+  }
+});
+
+
+document.addEventListener('init', function(event) {
+  var page = event.target;
+
   if (page.id === 'LLLActivities') {
     page.querySelector('#LLLFirst').onclick = function() {
-      document.querySelector('#LLLNavigator').pushPage('LLLActivity1.html', {data: {title: 'First Activity'}});
+      document.querySelector('#LLLNavigator').pushPage('LLLActivity1.html', {data: {title: 'Using Youtube'}});
     };
     page.querySelector('#LLLSecond').onclick = function() {
-      document.querySelector('#LLLNavigator').pushPage('LLLActivity2.html', {data: {title: 'Second Activity'}});
+      document.querySelector('#LLLNavigator').pushPage('LLLActivity2.html', {data: {title: 'Using Zoom'}});
     };
     page.querySelector('#LLLThird').onclick = function() {
-      document.querySelector('#LLLNavigator').pushPage('LLLActivity3.html', {data: {title: 'Third Activity'}});
+      document.querySelector('#LLLNavigator').pushPage('LLLActivity3.html', {data: {title: 'Other Digital Skills'}});
+    };
+    page.querySelector('#firstbutton').onclick = function() {
+      document.querySelector('#LLLNavigator').pushPage('LLLActivity1.html', {data: {title: 'button worked'}});
     };
   } else if (page.id === 'LLLActivity1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
@@ -45,7 +74,7 @@ document.addEventListener('init', function(event) {
       document.querySelector('#HWNavigator').pushPage('HWActivity2.html', {data: {title: 'HPB Workout'}});
     };
     page.querySelector('#HWThird').onclick = function() {
-      document.querySelector('#HWNavigator').pushPage('HWActivity3.html', {data: {title: 'Exercise Video'}});
+      document.querySelector('#HWNavigator').pushPage('HWActivity3.html', {data: {title: 'More Exercise Video'}});
     };
   } else if (page.id === 'HWActivity1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
@@ -67,7 +96,7 @@ document.addEventListener('init', function(event) {
       document.querySelector('#MWNavigator').pushPage('MWActivity2.html', {data: {title: 'Meditation Video'}});
     };
     page.querySelector('#MWThird').onclick = function() {
-      document.querySelector('#MWNavigator').pushPage('MWActivity3.html', {data: {title: 'Progressive Muscle Relaxation'}});
+      document.querySelector('#MWNavigator').pushPage('MWActivity3.html', {data: {title: 'Muscle Relaxation'}});
     };
   } else if (page.id === 'MWActivity1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
@@ -83,13 +112,13 @@ document.addEventListener('init', function(event) {
 
   if (page.id === 'LeiActivities') {
     page.querySelector('#LeiFirst').onclick = function() {
-      document.querySelector('#LeiNavigator').pushPage('LeiActivity1.html', {data: {title: 'Come n’ Live @ Zaobao.sg'}});
+      document.querySelector('#LeiNavigator').pushPage('LeiActivity1.html', {data: {title: 'Entertainment'}});
     };
     page.querySelector('#LeiSecond').onclick = function() {
       document.querySelector('#LeiNavigator').pushPage('LeiActivity2.html', {data: {title: 'PA e-courses'}});
     };
     page.querySelector('#LeiThird').onclick = function() {
-      document.querySelector('#LeiNavigator').pushPage('LeiActivity3.html', {data: {title: 'Another Leisure Video'}});
+      document.querySelector('#LeiNavigator').pushPage('LeiActivity3.html', {data: {title: 'Arts'}});
     };
   } else if (page.id === 'LeiActivity1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;

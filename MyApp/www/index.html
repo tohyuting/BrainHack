@@ -3,7 +3,9 @@
 <head>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <ons-splitter>
@@ -36,12 +38,128 @@
           <ons-icon icon="md-menu"></ons-icon>
         </ons-toolbar-button>
       </div>
-      <div class="center">
-        Latest COVID-19 news
-      </div>
     </ons-toolbar>
+    <ons-navigator animation="slide" swipeable id="CovidNavigator" page="CovidNews.html"></ons-navigator>
+    <template id="CovidNews.html">
+      <ons-page id="CovidNews">
+        <ons-toolbar style="height:100px">
+          <div class="center" style="height:200%"><h1>Latest Covid News</h1></div>
+      </ons-toolbar>
+      <p>Latest Covid News</p>
+      <ons-list-item id="CovidFirst" modifier="chevron" tappable>544 New Cases of Covid-19</ons-list-item>
+      <ons-list-item id="CovidSecond" modifier="chevron" tappable>Most Construction Work to Resume Gradually</ons-list-item>
+      <ons-list-item id="CovidThird" modifier="chevron" tappable>Singapore’s Circuit Breaker and Beyond</ons-list-item>
+      <ons-list-item id="CovidFourth" modifier="chevron" tappable>Official MOH Twitter</ons-list-item>
+    </ons-page>
+  </template>
   </ons-page>
 </template>
+
+<template id="CovidNews1.html">
+  <ons-page id="CovidNews1">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Covid News</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <div>
+      <p>As of 2 June 2020, 12pm, the Ministry of Health (MOH) has preliminarily confirmed an additional 544 cases of COVID-19 infection in Singapore, the vast majority of whom are Work Permit holders residing in foreign worker dormitories. Based on our investigations so far, there are four cases in the community, of whom one is a Singaporean/Permanent Resident and three are Work Pass holders.</p>
+      <br>
+      <p>We are still working through the details of the cases, and further updates will be shared via the MOH press release that will be issued tonight.</p>
+      <p>Referenced from</p><a href="https://www.moh.gov.sg/news-highlights/details/544-new-cases-of-covid-19-infection">Ministry of Health</a>
+    </div>
+  </ons-page>
+</template>
+
+<template id="CovidNews2.html">
+  <ons-page id="CovidNews2">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Covid News</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <div>
+      <img src="https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2020/06/02/rk_constructionsite_020620.jpg" width="100%">
+      <br>
+      <p>After an eight-week break, workers from a few essential infrastructure projects led by building solutions group ISOTeam will be returning to their work sites today.</p>
+      <p>These projects have been given the go-ahead to restart on the first day after the circuit breaker, during which most works in the construction sector came to a halt.</p>
+      <p>On top of getting workers to wear face masks and ensuring the use of the SafeEntry digital check-in system, stringent measures have been put in place.</p>
+      <p>These include appointing a safe management officer to ensure that measures to guard against the spread of Covid-19 are in place, and establishing an evacuation plan at project sites for suspected Covid-19 cases, said Mr Anthony Koh, chief executive of ISOTeam.</p>
+      <p>Critical and time-sensitive projects such as MRT works will be prioritised, but most construction work is unlikely to be able to resume so soon, said contractors.</p>
+      <p>This is due to the numerous requirements that they need to fulfil in areas like housing for workers before they can restart work, which involve coordination among different employers and government agencies, they said yesterday.</p>
+      <p>The Building and Construction Authority (BCA) has said it expects another 5 per cent of the construction workforce to gradually resume work this month, up from 5 per cent during the circuit breaker.</p>
+      <p>Mr Eddy Lau, executive director of the Specialists Trade Alliance of Singapore, which represents more than 1,300 specialist contractors and suppliers in the building and construction industry, said most of its members are unlikely to be ready to start work today. He added that all the firms are trying their best to fulfil the safe management measures and restart criteria, including having workers tested for Covid-19.</p>
+      <p>Mr V. Manimaran, operations manager of Wee Chwee Huat Scaffolding and Construction, said some of his firm's clients, who are main contractors, have received approval from BCA to restart projects in essential sectors like telecommunications. "They are chasing us to start work soon, but we still need to get swab tests done for our workers first," he said.</p>
+      <p>Yesterday, the multi-ministry task force tackling the Covid-19 outbreak said an additional 28,000 workers have been cleared of the virus and can resume work, on top of about 12,000 essential workers already working during the circuit breaker. Singapore has about 320,000 foreign construction workers.</p>
+      <p>Mr Hooi Yu Koh, chairman and chief executive of construction company Kori Holdings, said that while some of his clients are ready to resume work, his workers - some of whom are temporarily housed in hotels and cruise ships - need to first be rehoused into dormitory blocks that have been cleared of the virus before they can return to work.</p>
+      <p>Mr Manimaran's firm has already started putting in place measures to comply with new Ministry of Manpower guidelines to ensure that workers can be isolated between their swab tests. Most will need to go through two tests and be isolated for 14 days in between the tests.</p>
+      <p>Dormitories which fulfil the requirements will be given priority to have their workers tested first. These include furnishing rooms with single beds placed at least 1m apart, in groups of five, with each group separated by about 2m, where possible.</p>
+      <p>Mr Manimaran's firm, which runs a dormitory for its workers, is meeting this requirement by limiting each bunk bed to one worker.</p>
+      <p>His workers will be tested for Covid-19 today. If all goes well, the 40 to 50 workers on the four projects approved for resumption may be able to return to work in two or three weeks.</p>
+      <p>"Up till a few weeks ago, we were unclear about the various requirements that we needed to fulfil. But there is clearer instruction now, and we have a better idea of how we can resume work," he said.</p>
+      <p>Referenced from</p><a href="https://www.straitstimes.com/singapore/essential-projects-restart-but-most-construction-work-to-resume-gradually">The Straits Times</a>
+    </div>
+  </ons-page>
+</template>
+
+<template id="CovidNews3.html">
+  <ons-page id="CovidNews3">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Covid News</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <div>
+      <img src="https://cna-sg-res.cloudinary.com/image/upload/q_auto,f_auto/image/12792814/16x9/670/377/316b22304ac29d5747c85f6959054f41/Wv/the-coronavirus-disease--covid-19--outbreak-in-singapore-1.jpg" width="100%">
+      <br>
+      <p>SINGAPORE: Amendments to the COVID-19 regulations, which were published in the Government Gazette just before they expired on Jun 2, mean the laws are now in force indefinitely and not just during the "circuit breaker" period.</p>
+      <p>A host of other detailed amendments were published in a notice at 11.59pm on Jun 1, after the various ministries had announced new guidelines for the phases post-circuit breaker.</p>
+      <p>The circuit breaker was a period between Apr 7 and May 4, later extended to Jun 1, meant to curb further spread of COVID-19 in Singapore.</p>
+      <p>The COVID-19 regulations gave legal force to safe distancing and other such measures to prevent the spread of the coronavirus, to urge people to mask up and stay home unless absolutely necessary.</p>
+      <p>Here is a list of some of the amendments published in the updated laws.</p>
+      <p><strong>1. The Jun 1 end date was removed</strong></p>
+      <p>One of the first amendments published late last night was for the phrase "for the period between 7 April 2020 and 1 June 2020 (both dates inclusive)" to be removed from the section explaining when the regulations are in force.</p>
+      <p>Instead, it has been substituted with the words "starting 7 April 2020", with no end date specified.</p>
+      <p><strong>2. What "member of same household" means</strong></p>
+      <p>New paragraphs in the amendment now state specifically what "member of the same household" means.</p>
+      <p>Previously, it was stated that meeting anyone from a different household except for specific exceptions is illegal under the regulations.</p>
+      <p>A person is now regarded as a member of your household if they are your spouse, your parent, child, or sibling who ordinarily lives in the same house as you.</p>
+      <p>Also, this now includes a person you have an agreement with, whether orally or in writing, expressly or implied, to live in the same residence.</p>
+      <p>References to parents, grandparents, children, grandchildren, siblings also mean step-parents, step-grandparents, step-children, step-grandchildren, step-siblings, or adopted family members.</p>
+      <p><strong>3. Visiting allowances</strong></p>
+      <p>The amendments also reflect the new allowances for people to socialise with specific members of the family, as previously announced.</p>
+      <p>Now, people are allowed to visit their parents, their grandparents, or their spouse's parents or grandparents.</p>
+      <p>However, households cannot receive more than two visitors a day, and these two people must be from the same household themselves.</p>
+      <p><strong>4. Social gatherings</strong></p>
+      <p>Regulation 6, the regulation on social gatherings that previously made all forms of socialising outside of your household illegal, has also been amended.</p>
+      <p>Now, a person must not meet another person not from their household anywhere outside of home unless it is for work.</p>
+      <p>There are a few exceptions, such as for receiving education or care from a public body, a specified school or a licensed early childhood development centre.</p>
+      <p><strong>5. When face shields may be worn in lieu of face masks</strong></p>
+      <p>A person or child may wear a face shield instead of a face mask in the following scenarios:</p>
+      <p>If wearing a mask in the required manner leads to severe medical conditions that wearing a face shield does not, or if the person is delivering a speech, teaching or lecturing in a lecture hall, classroom, auditorium or other room and is at least a metre away from any other individual while doing so.</p>
+      <p><strong>6. Weddings and funerals post-circuit breaker</strong></p>
+      <p>Weddings can be held but only the bride and groom and eight guests are allowed to attend in person.</p>
+      <p>There are also specific rules for where it can be held - such as a place of worship, in the bride or groom's home or immediate family's home, or a building occupied by the Registries of Marriages or Muslim Marriages.</p>
+      <p>People in charge at funeral events must take all reasonable steps to ensure that there are not more than 10 individuals attending the wake or event at any time. The usual safe distancing rules apply.</p>
+      <p><strong>7. Businesses in phase 1</strong></p>
+      <p>Shops and enterprises that have resumed business must abide by newly stated obligations, such as allowing natural ventilation of the premises during working hours, having procedures and controls for assessing every visitor or customer for symptoms and refusing entry to suspected symptomatic cases.</p><p>If people who enter the shops are symptomatic cases and not wearing a mask, the business must try its best to provide the individual with a mask and require them to wear it, and to ask them to leave immediately.</p><p>Common areas must be periodically cleaned each day by law, and toilets not open to the public must be provided at all times with adequate toilet paper, liquid soap or detergent, litter bins and clean towels or hand dryers.</p>
+      <p>Disinfecting agents like hand sanitisers, disinfectant sprays, paper towels and wipes must also be provided at all times up to a point where it is reasonably practicable, for the free use of customers, visitors and employees.</p>
+      <p><strong>8. Non-permitted enterprises and working from home</strong></p>
+      <p>Anyone who is not a permitted enterprise worker cannot work anywhere other than from home, and only through means that do not require meeting any individual in person.</p>
+      <p>Flouting any of these regulations can earn an offender up to six months' jail, a fine of up to S$10,000, or both for the first offence.</p>
+      <p>Referenced from</p>
+      <a href="https://www.channelnewsasia.com/news/singapore/covid-19-laws-in-force-indefinitely-post-circuit-breaker-12796290">Channel News Asia</a>
+    </div>
+  </ons-page>
+</template>
+
+<template id="CovidNews4.html">
+  <ons-page id="CovidNews4">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Covid News</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <a class="twitter-timeline" href="https://twitter.com/sporeMOH?ref_src=twsrc%5Etfw">Tweets by sporeMOH</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </ons-page>
+</template>
+
 
 <template id="activity-lll.html">
   <ons-page>
@@ -59,13 +177,16 @@
           <div class="center" style="height:200%"><h1>Lifelong Learning</h1></div>
       </ons-toolbar>
       <p>Lifelong Learning Activities</p>
-      <ons-list-header>Lifelong Learning Activities</ons-list-header>
+      <ons-list-header>List of Activities</ons-list-header>
       <ons-list-item id="LLLFirst" modifier="chevron" tappable>
-        <div>
         <p>Learn how to use Youtube to keep yourself occupied during COVID-19</p>
+      </ons-list-item>
+      <ons-list-item id="LLLSecond" modifier="chevron" tappable>
+        <div>
+          <p>Learn to use Zoom to stay connected with your friends and family</p>
+          <ons-button id="firstbutton">Click me!</ons-button>
         </div>
       </ons-list-item>
-      <ons-list-item id="LLLSecond" modifier="chevron" tappable>Learn to use Zoom to stay connected with your friends and family</ons-list-item>
       <ons-list-item id="LLLThird" modifier="chevron" tappable>Learn more digital skills online</ons-list-item>
 
     </ons-page>
@@ -77,8 +198,22 @@
         <div class="left"><ons-back-button>Back to Lifelong Learning Activities</ons-back-button></div>
         <div class="center"></div>
       </ons-toolbar>
-
-      <p>Learn how to use Youtube to keep yourself occupied during COVID-19</p>
+      <div>
+        <h3>Learn how to use Youtube to keep yourself entertained!</h3>
+        <p>Feeling <strong>bored</strong> at home? Fear not! Learn how to use Youtube to keep yourself occupied during COVID-19</p>
+        <br>
+        <img src="https://www.wikihow.com/images/thumb/6/6a/Play-YouTube-Videos-Step-6.jpg/aid2010014-v4-728px-Play-YouTube-Videos-Step-6.jpg.webp" width="100%">
+        <p>Step 1: Open the YouTube app. If you do not already have it, you can download it from the <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=en'"> Play Store <ons-icon icon="fa-google-play"></ons-icon></ons-button> or <ons-button onclick="window.location.href='https://apps.apple.com/us/app/youtube-watch-share-videos/id544007664'">App Store <ons-icon icon="fa-app-store-ios"></ons-icon></ons-button></p>
+        <img src="https://www.wikihow.com/images/thumb/e/ed/Play-YouTube-Videos-Step-7.jpg/aid2010014-v4-728px-Play-YouTube-Videos-Step-7.jpg.webp" width="100%">
+        <p>Step 2: Tap the Search button. This looks like a magnifying glass.</p>
+        <img src="https://www.wikihow.com/images/thumb/e/eb/Play-YouTube-Videos-Step-8.jpg/aid2010014-v4-728px-Play-YouTube-Videos-Step-8.jpg.webp" width="100%">
+        <p>Step 3: Enter a video title or subject into the search field.</p>
+        <img src="https://www.wikihow.com/images/thumb/7/77/Play-YouTube-Videos-Step-9.jpg/aid2010014-v4-728px-Play-YouTube-Videos-Step-9.jpg.webp" width="100%">
+        <p>Step 4: Tap Search. You can also tap the Trending tab (flame icon) to view a list of videos that are currently popular.</p>
+        <img src="https://www.wikihow.com/images/thumb/2/22/Play-YouTube-Videos-Step-10.jpg/aid2010014-v4-728px-Play-YouTube-Videos-Step-10.jpg.webp" width="100%">
+        <p>Step 5: Tap a video. Video playback will begin automatically. If you have a slow connection, the video make take some time to buffer before playback begins. You can rotate mobile devices to quickly view videos in fullscreen. Tap a video after playback begins to pause it. Tap and drag the bar at the bottom to skip forward or backwards in the video. You can also click different points of the bar to skip to that point. Tap the Settings button (gear icon) in the corner to access video settings, like quality, captions, or playback speed.</p>
+        <p>Referenced from</p><a href="https://www.wikihow.com/Play-YouTube-Videos">How to Play YouTube Videos</a>
+      </div>
     </ons-page>
   </template>
 
@@ -88,8 +223,18 @@
         <div class="left"><ons-back-button>Back to Lifelong Learning Activities</ons-back-button></div>
         <div class="center"></div>
       </ons-toolbar>
-
-      <p>Learn to use Zoom to stay connected with your friends and family</p>
+      <h3>Learn to use Zoom to stay connected with your friends and family</h3>
+      <p>Miss hanging out with your friends and family during Ciruit Breaker? Try video-conferencing with them using Zoom to <strong>keep in touch with them!</strong></p>
+      <br>
+      <img src="https://i.insider.com/5e7240adc48540154d227dd4?width=1200&format=jpeg&auto=webp" width="100%">
+      <p>Step 1:"Meet & Chat" combines the desktop "Home" and "Chat" tabs. The main options are found at the top: New Meeting, Join, Schedule, and Share Screen. Below, you'll see recent call and chat history, along with any outstanding Contact Requests. Tap to view the chat with any contact or to accept a request. You can also tap the star icon in the top-left corner to view your favorites or the pencil icon in the top-right corner to draft a new message.</p>
+      <img src="https://i.insider.com/5e7240e6c485402bc93fdc64?width=1200&format=jpeg&auto=webp" width="100%">
+      <p>Step 2: "Meetings" shows a lineup of upcoming events. You can also start a call, send an invitation, or edit a current event at the top of the page. Tap to begin any one of these options and follow the prompts provided. Your "Personal Meeting ID" is your unique code to start an individual meeting. Tap on an upcoming meeting to view its details or delete it entirely. Tap on a meeting and you'll also find the option to add invitees and send invitations to these contacts via email or text message.</p>
+      <img src="https://i.insider.com/5e724126c485407214198464?width=1200&format=jpeg&auto=webp" width="100%">
+      <p>Step 3: "Contacts" looks extremely similar to the desktop version and lists your starred favorites, as well as any others in your company directory. Search for contacts at the top of the page. Tap the plus symbol in the top-right corner to open a pop-up menu to add a contact, create a new channel, or join a public one. You can also toggle between contacts and channels at the top. Contacts are individual people while channels are groups of these contacts.</p>
+      <img src="https://i.insider.com/5e724154c485402c5969f5a4?width=1200&format=jpeg&auto=webp" width="100%">
+      <p>Step 4: Finally access "Settings" to make any changes to your account. Your Zoom settings are organized by Meetings, Contacts, Chat, and General. You can also add Siri Shortcuts. To make changes to your profile, tap your name at the top of the screen, where you can change your profile photo, display name, or update your password. This is also where you can sign out of the Zoom app.</p>
+      <p>Referenced from</p><a href="https://www.businessinsider.com/how-to-use-zoom">How to Play YouTube Videos</a>
     </ons-page>
   </template>
 
@@ -100,7 +245,26 @@
         <div class="center"></div>
       </ons-toolbar>
 
-      <p>Learn more digital skills online</p>
+      <div>
+        <p><strong> Introduction to Mobile Devices </strong></p>
+        <img src="https://d33wubrfki0l68.cloudfront.net/8641b27c914b01354cb41397eef7c3271a5559d8/243fa/images/learn-online/mobile-devices.jpg" width="100%">
+        <p>Learn how to use tablets and smartphones. </p>
+        <ons-button width=100% onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-mobile-devices/'"> Click here to get your fingers tapping away! <ons-icon icon="fa-mobile-alt"></ons-icon></ons-button>
+
+      </div>
+
+      <div>
+        <p><strong> Introduction to Desktop </strong></p>
+        <img src="https://d33wubrfki0l68.cloudfront.net/b4daba057250e7aa5e25b3399109b56a278c914c/00559/images/learn-online/intro-desktop.jpg" width="70%">
+        <p> Online guides will familiarise you with the basic components and capabilities of a desktop computer. You will be able to learn how to use basic parts of a computer, learn how to operate different operating systems and use browsers.</p>
+        <ons-button onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-desktop/'"> Click here get your brain juices flowing! <ons-icon icon="fa-desktop"></ons-icon></ons-button>
+
+      </div>
+
+      <p>Referenced from</p><a href="https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/overview/">Learn Online</a>
+
+
+
     </ons-page>
   </template>
   </ons-page>
@@ -124,10 +288,10 @@
       </ons-toolbar>
 
       <p>This is the first page.</p>
-      <ons-list-header>Health & Wellness Activities</ons-list-header>
+      <ons-list-header>List of Activities</ons-list-header>
       <ons-list-item id="HWFirst" modifier="chevron" tappable><p>Get Fit With Me</p></ons-list-item>
       <ons-list-item id="HWSecond" modifier="chevron" tappable>HPB Workout</ons-list-item>
-      <ons-list-item id="HWThird" modifier="chevron" tappable>More Exercise Video</ons-list-item>
+      <ons-list-item id="HWThird" modifier="chevron" tappable>More Exercise Videos</ons-list-item>
 
     </ons-page>
   </template>
@@ -140,12 +304,13 @@
       </ons-toolbar>
 
       <div>
-        <p>“Get Fit With Me – Overcome COVID-19”</p>
+        <p><strong>Get Fit With Me – Overcome COVID-19</strong></p><br>
         <ul>
           <li>Channel 8 (weekdays 10am to 3pm)</li>
           <li>Suria and Vasantham (Monday, Wednesday and Friday at 3.30pm)</li>
           <li>Love 97.2 Facebook Live (Monday, Wednesday and Friday at 2pm)</li>
         </ul>
+
       </div>
     </ons-page>
   </template>
@@ -158,8 +323,17 @@
       </ons-toolbar>
 
       <div>
-        <p> HPB Workout Video</p>
+        <p><strong> 7 Easy Exercises to an Active Lifestyle</strong></p><br>
         <iframe width=100% height=100% src="https://www.youtube.com/embed/4UCkKDlXYk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <p>Do these 7 easy exercises to ensure you stay fit and healthy! Remember to do this fitness routine two times a week to strengthen your muscles, and make you feel better.</p>
+      </div>
+
+      <div>
+        <p><strong> You Can Get Moving </strong></p><br>
+        <iframe width=100% height=100% src="https://www.youtube.com/embed/fLLHEtRbJ8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <p>Anyone can get moving with these 7 easy sit-down exercises.</p>
       </div>
     </ons-page>
   </template>
@@ -172,8 +346,19 @@
       </ons-toolbar>
 
       <div>
-        <p> More Exercise Video <p>
-          <iframe width=100% height=100% src="https://www.youtube.com/embed/8CE4ijWlQ18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+        <p><strong> 20 Min Exercise for Seniors, Elderly, & Older People </strong></p><br>
+        <iframe width=100% height=100% src="https://www.youtube.com/embed/8CE4ijWlQ18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <p>Seated Chair Exercise For Senior Workout Routines.Get Active!</p>
+      </div>
+
+      <div>
+        <p><strong> Low Impact Aerobics </strong></p><br>
+        <iframe width=100% height=100% src="https://www.youtube.com/embed/nKFJHmzO-KY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <p>This quick and simple exercise can be done anywhere, anytime – so let’s get moving!</p>
+      </div>
+
     </ons-page>
   </template>
 
@@ -198,7 +383,7 @@
       </ons-toolbar>
 
       <p>Cooking Activities</p>
-      <ons-list-header>Cooking Activities</ons-list-header>
+      <ons-list-header>List of Recipes</ons-list-header>
       <ons-list-item id="CookingFirst" modifier="chevron" tappable>
       <p>HPB Healthier Recipes</p>
       </ons-list-item>
@@ -211,8 +396,92 @@
         <div class="left"><ons-back-button>Back to Cooking Activities</ons-back-button></div>
         <div class="center"></div>
       </ons-toolbar>
+      <div>
+        <p><strong>Fragrant Claypot Veg Brown Rice: Healthier Recipe</strong></p>
+        <br>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/B8byIqB7vOE?list=PLw_CrLrIHQhXBKIFjDa93XNHRRfH6jNR2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
 
-      <p>HPB Healthier Recipes</p>
+        <p>Brown Rice can be made tasty as well! Learn how to cook your brown rice in this 15 minutes video and enjoy your homecooked meal while staying at home during COVID!</p>
+        <p><em>Serving size: 1, Calories: 450kcal (Per Serving)</em></p>
+
+
+        <ons-list-header>Summary of Recipe</ons-list-header>
+          <ons-list-item expandable>
+            Tap to see more
+            <div class="expandable-content">
+              <h4>Ingredients</h4>
+              <ul>
+                  <li>2 cups brown rice *</li>
+                  <li>200g pumpkin, cut into cubes</li>
+                  <li>1 small carrot, cut into cubes</li>
+                  <li>3 stalks long beans, cut into bite-sized pieces</li>
+                  <li>3 fresh mushrooms, cut into cubes</li>
+                  <li>1 tsp garlic, minced</li>
+                  <li>2 stalks spring onion, chopped finely (optional)</li>
+                  <li>3 cups vegetable stock *</li>
+                  <li>1 tbsp oil *</li>
+                  <li>2 tbsp vegetarian oyster sauce  *</li>
+                  <li>A dash of pepper</li>
+              </ul>
+              <p>* choose products with the Healthier Choice Symbol (HCS)</p>
+              <h4>Summary of steps</h4>
+
+              <ol>
+                  <li>Heat a little oil in a frying pan and stir-fry garlic till fragrant.</li>
+                  <li>Add the stir-fried garlic, cubed ingredients, brown rice and seasoning into the rice cooker and mix well.</li>
+                  <li>Add in vegetable stock and switch on the rice cooker.</li>
+                  <li>Once the rice is cooked, garnish and serve.</li>
+              </ol>
+            </div>
+          </ons-list-item>
+
+    </div>
+
+    <div>
+        <p><strong>Chicken Bee Hoon: Healthier Recipe</strong></p>
+        <br>
+        <iframe width="100%" src="https://www.youtube.com/embed/lLetxzF6_zs?list=PLw_CrLrIHQhXBKIFjDa93XNHRRfH6jNR2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <p>Try out this recipe to spoil yourself with this healthier recipe of Chicken Bee Hoon while staying at home during COVID!</p>
+        <p><em>Serving size: 1, Calories: 500kcal (Per Serving)</em></p>
+
+        <ons-list-header>Summary of Recipe</ons-list-header>
+        <ons-list-item expandable>
+        Tap to see more
+      <div class="expandable-content">
+        <h4>Ingredients</h4>
+        <ul>
+            <li>800g cooked brown rice bee hoon</li>
+            <li>200g choy sim (chinese flowering mustard)</li>
+            <li>4 tsp oil*</li>
+            <li>400g chicken, skinless, simmered in 600ml chicken stock and shredded</li>
+            <li>2-3 rock sugar chunks</li>
+            <li>3 tbsps oyster sauce</li>
+            <li>600ml water</li>
+            <li>1 tbsp dark soya sauce</li>
+            <li>½ tbsp. tomato sauce</li>
+            <li>25g corn flour for thickening</li>
+            <li>50g shitake mushroom soaked until soft</li>
+            <li>1 tbsp light soya sauce to taste</li>
+            <li>2-3 chucks of rock sugar</li>
+            <li>600ml chicken stock (same stock used to cook chicken breast)</li>
+        </ul>
+        <p>* choose products with the Healthier Choice Symbol (HCS)</p>
+        <h4>Summary of steps</h4>
+
+        <ol>
+            <li>Add mushrooms and the rest of the ingredients into a pot. Simmer until soft. When cool, slice mushrooms and set aside</li>
+            <li>To make the gravy, cook all the ingredients in a pot and thicken with corn flour mixed with a little water. Set aside.</li>
+            <li>Blanche bee hoon in boiling water. Drain and set aside.</li>
+            <li>Blanche chye sim in boiling water. Set aside.</li>
+            <li>Put oil and gravy in a serving plate or bowl, and bee hoon and toss well. Top with sliced mushroom, chye sim and shredded chicken. Serve hot.</li>
+        </ol>
+      </div>
+      </ons-list-item>
+
+    </div>
+
     </ons-page>
   </template>
   </ons-page>
@@ -236,12 +505,12 @@
           <div class="center" style="height:200%"><h1>Leisure</h1></div>
         </ons-toolbar>
         <p>Leisure Activities</p>
-        <ons-list-header>Leisure Activities</ons-list-header>
+        <ons-list-header>List of Activities</ons-list-header>
         <ons-list-item id="LeiFirst" modifier="chevron" tappable>
-          <p>Come n’ Live @ Zaobao.sg</p>
+          <p>Entertainment</p>
         </ons-list-item>
         <ons-list-item id="LeiSecond" modifier="chevron" tappable>PA e-courses</ons-list-item>
-        <ons-list-item id="LeiThird" modifier="chevron" tappable>Another Leisure Video</ons-list-item>
+        <ons-list-item id="LeiThird" modifier="chevron" tappable>Arts</ons-list-item>
     </ons-page>
   </template>
 
@@ -252,7 +521,33 @@
         <div class="center"></div>
       </ons-toolbar>
 
-      <p>Zaobao</p>
+      <div>
+        <p><strong> meWATCH </strong></p>
+        <img src="https://www.mewatch.sg/blob/12211810/7689bd5dbf288e9da686284035e2d189/mewatch-en---global-navigation-menu---to-publish-30-jan-thumbnail.svg" width="100%">
+        <p> meWATCH is a total video destination, allowing audiences free access to on-demand Made-in- Singapore content including dramas1, entertainment, news, sports programmes and live shows; as well as subscription-based content from Mediacorp’s partners like HBO, tvN Movies and beIN Sports.</p>
+        <ons-button onclick="window.location.href='https://www.mewatch.sg/en/'"> Click here to watch on your browser <ons-icon icon="fa-tv"></ons-icon></ons-button>
+        <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=sg.mediacorp.android&hl=en_SG'"> Click here to download the meWATCH Android App <ons-icon icon="fa-google-play"></ons-icon></ons-button>
+
+      </div>
+
+      <div>
+        <p><strong> meLISTEN </strong></p>
+        <img src="https://www.melisten.sg/static/android-icon-192x192.png" width="70%">
+        <p>meLISTEN is Mediacorp’s free digital audio service that aims to deliver a more personalised digital listening experience, thanks to an array of innovative features. Users can access podcasts, curated playlists and enjoy live radio streaming where listeners can connect with their favourite DJs from all of Mediacorp’s 11 radio stations.</p>
+        <ons-button onclick="window.location.href='https://www.melisten.sg/'"> Click here to listen on your browser <ons-icon icon="md-radio"></ons-icon></ons-button>
+        <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=net.meradio&hl=en_SG'"> Click here to download the meLISTEN Android App <ons-icon icon="fa-google-play"></ons-icon></ons-button>
+
+      </div>
+
+      <div>
+        <p><strong> Spotify </strong></p>
+        <img src="https://www.scdn.co/i/_global/open-graph-default.png" width="100%">
+        <p>Spotify is a digital music service that gives you access to millions of songs.</p>
+        <ons-button onclick="window.location.href='https://www.spotify.com/'"> Click here to listen on your browser <ons-icon icon="fa-spotify"></ons-icon></ons-button>
+        <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_SG'"> Click here to download the Spotify Android App <ons-icon icon="fa-google-play"></ons-icon></ons-button>
+      </div>
+
+
     </ons-page>
   </template>
 
@@ -263,22 +558,68 @@
         <div class="center"></div>
       </ons-toolbar>
 
-      <p>PA e-courses</p>
+      <div>
+      <p><strong> Crochet & Knitting </strong></p><br>
+      <iframe width=100% height=100% src="https://www.youtube.com/embed/kQLkzCZroJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+      <p>Start on your first crocheting and knitting project with help from PA Trainer Chong Siew Ching. </p>
+      </div>
+
+      <div>
+      <p><strong> Recreational Singing </strong></p><br>
+      <iframe width=100% height=100% src="https://www.youtube.com/embed/OMrsXn7YlA4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+      <p>It's not too late to become a popstar! Learn how to sing from PA Trainer Chun Chee Mang.</p>
+      </div>
+
+      <div>
+      <p><strong> Upcycle your Denims </strong></p><br>
+      <iframe width=100% height=100% src="https://www.youtube.com/embed/6TWzqeGgSA8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </ons-page>
+      <br>
+      <p>OLD is GOLD. Inject new life into your pre-loved denims with PA Trainer Koko Koh.</p>
+      </div>
+
     </ons-page>
   </template>
+
 
   <template id="LeiActivity3.html">
-    <ons-page id="LeiActivity3">
-      <ons-toolbar>
-        <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
-        <div class="center"></div>
-      </ons-toolbar>
+  <ons-page id="LeiActivity3">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
 
-      <p>Leisure activities</p>
-    </ons-page>
-  </template>
+    <div>
+      <p><strong>Makan Time</strong></p>
+      <img src="https://www.aic.sg/sites/silverpagesassets/SilverPages%20Assets/Publications%20(Caregiving)/AIC%20Wellness/Makantimecover.png" width="100%">
+      <p> 16 fun arts-based activities and puzzles in English and Mandarin for older adults to do at home. The activities are also paired with key COVID-19 related information to keep everyone safe.</p>
+      <ons-button onclick="window.location.href='https://www.aic.sg/sites/silverpagesassets/SilverPages%20Assets/Publications%20(Caregiving)/AIC%20Wellness/HAD%20Activity%20Booklet%201%20-%20Makan%20Time%20-%20Web.pdf'"> Click here to get artsy! <ons-icon icon="fa-palette"></ons-icon></ons-button>
+      <!--<input type="button" onclick="window.location.href='https://www.aic.sg/sites/silverpagesassets/SilverPages%20Assets/Publications%20(Caregiving)/AIC%20Wellness/HAD%20Activity%20Booklet%201%20-%20Makan%20Time%20-%20Web.pdf';" value="Click here to get artsy!" />
+       <button><a href="https://www.aic.sg/sites/silverpagesassets/SilverPages%20Assets/Publications%20(Caregiving)/AIC%20Wellness/HAD%20Activity%20Booklet%201%20-%20Makan%20Time%20-%20Web.pdf">Click here to get artsy!</a></button> -->
+    </div>
+
+    <div>
+      <p><strong>My Home, My Kampong</strong></p>
+      <img src="https://www.aic.sg/sites/silverpagesassets/SilverPages%20Assets/Publications%20(Caregiving)/AIC%20Wellness/Home%20Kampong%20Thumbnail.jpeg" width="100%">
+      <p> 16 fun arts-based activities and puzzles in English and Mandarin for older adults to do at home. The activities are also paired with key COVID-19 related information to keep everyone safe.</p>
+      <ons-button onclick="window.location.href='https://www.aic.sg/sites/silverpagesassets/SilverPages%20Assets/Publications%20(Caregiving)/AIC%20Wellness/HAD%20Activity%20Booklet%202%20-%20My%20Home%20-%20Web.pdf'"> Click here to get artsy! <ons-icon icon="fa-paint-roller"></ons-icon></button>
+<!--
+      <a href="https://www.aic.sg/sites/silverpagesassets/SilverPages%20Assets/Publications%20(Caregiving)/AIC%20Wellness/HAD%20Activity%20Booklet%202%20-%20My%20Home%20-%20Web.pdf"><ons-icon icon="fa-palette"></ons-icon>Click here to get artsy!</a> -->
+    </div>
+
+    <div>
+      <p><strong>SPARKS! Art for Wellness Toolkit</strong></p>
+      <img src="https://www.reedsmith.com/-/media/images/news/2019/paintbrushesincan_590587682_800x400px.jpg" width="100%">
+      <p>The English art activities in this toolkit were developed as part of the Community Care sector’s inaugural Arts Residency, a joint initiative by AIC and the National Arts Council. The Residency paired 10 artists with nine nursing homes across Singapore. Activities in the toolkit are intended for frail older adults and offer opportunities for simplification or to meaningfully challenge participants</p>
+      <ons-button onclick="window.location.href='https://partners.aic.sg/sites/aicassets/AssetGallery/Community%20Care%20providers/AIC%20Wellness%20Programme/AIC%20Toolkit%20Full.PDF'"> Click here to get artsy! <ons-icon icon="fa-paint-brush"></ons-icon></button>
+      <!--<a href="https://partners.aic.sg/sites/aicassets/AssetGallery/Community%20Care%20providers/AIC%20Wellness%20Programme/AIC%20Toolkit%20Full.PDF"><ons-icon icon="fa-paint-brush"></ons-icon>Click here to get artsy!</a>-->
+    </div>
 
   </ons-page>
+</template>
+
+</ons-page>
 </template>
 
 <template id="activity-mw.html">
@@ -298,10 +639,10 @@
           <div class="center" style="height:200%"><h1>Mental Wellness</h1></div>
         </ons-toolbar>
         <p>This is the first page.</p>
-        <ons-list-header>Mental Wellness Activities</ons-list-header>
-        <ons-list-item id="MWFirst" modifier="chevron" tappable>First Activity</ons-list-item>
-        <ons-list-item id="MWSecond" modifier="chevron" tappable>Second Activity</ons-list-item>
-        <ons-list-item id="MWThird" modifier="chevron" tappable>Third Activity</ons-list-item>
+        <ons-list-header>List of Activities</ons-list-header>
+        <ons-list-item id="MWFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Tips for Mental Wellbeing</ons-list-item>
+        <ons-list-item id="MWSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>Meditation You Can Do Anywhere</ons-list-item>
+        <ons-list-item id="MWThird" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>Progressive Muscle Relaxation</ons-list-item>
     </ons-page>
   </template>
 
@@ -332,20 +673,26 @@
         <br>
         <h3>3. Manage Your Time</h3>
         <p>Plan your time well so that you can complete your tasks on time. Break large tasks into smaller manageable parts.</p>
+        <img src="https://www.healthhub.sg/sites/assets/Assets/Article%20Images/time-management-mental-wellbeing.jpg.png" width="100%">
         <br>
         <h3>4. Speak to Someone</h3>
         <p>Seeking help is not a sign of weakness. Share your worries with someone you trust.</p>
+        <img src="https://www.healthhub.sg/sites/assets/Assets/Article%20Images/talk-to-somebody-mental-wellbeing.jpg" width="100%">
         <br>
         <h3>5. Think Positive</h3>
         <p>Changing your mindset and having a positive attitude can make you happier.</p>
+        <img src="https://www.healthhub.sg/sites/assets/Assets/Article%20Images/think-positive-mental-wellbeing.jpg" width="100%">
         <br>
         <h3>6. Sleep Well</h3>
         <p>Getting enough sleep (7 to 9 hours daily for an adult) is key to better concentration and focus.</p>
+        <img src="https://www.healthhub.sg/sites/assets/Assets/Article%20Images/sleep-mental-wellbeing.jpg" width="100%">
         <br>
         <h3>7. Practise Deep Breathing</h3>
         <p>Breathe in deeply through your nose for 5 counts and breathe out slowly for 5 counts.</p>
+        <img src="https://www.healthhub.sg/sites/assets/Assets/Article%20Images/deep-breathing-exercise.png" width="100%">
         <br>
-        <p>Besides the above tips, you can learn some relaxation techniques to help you cope with the stresses of everyday life. Follow this video to learn how to practise progressive muscle relaxation.</p>
+        <p>Besides the above tips, you can learn some relaxation techniques to help you cope with the stresses of everyday life.</p>
+        <p>Referenced from</p><a href="https://www.healthhub.sg/live-healthy/891/mental-wellbeing">7 Easy Tips for Better Mental Wellbeing</a>
       </div>
     </ons-page>
   </template>
@@ -358,8 +705,9 @@
       </ons-toolbar>
 
       <div>
-        <p>5-Minute Meditation You Can Do Anywhere</p>
+        <p><strong>5-Minute Meditation You Can Do Anywhere</strong></p>
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/inpok4MKVLM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>In just 5 minutes you can reset your day in a positive way! Recommended if you are feeling down</p>
       </div>
     </ons-page>
   </template>
@@ -372,8 +720,9 @@
       </ons-toolbar>
 
       <div>
-        <p>Progressive Muscle Relaxation</p>
+        <p><strong>Progressive Muscle Relaxation</strong></p>
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MGxk12mI4t8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>All tensed up and bogged down? Loosen up and lighten up! Power down and try some muscle relaxation techniques for a restful night</p>
       </div>
     </ons-page>
   </template>
@@ -394,7 +743,7 @@
     </ons-toolbar>
   </ons-page>
 </template>
-
+<!--
 <template id="about.html">
   <ons-page>
     <ons-toolbar>
@@ -428,7 +777,7 @@
     </section>
 
   </ons-page>
-</template>
+</template>-->
 
 <script src="js/test.js"></script>
 </body>
