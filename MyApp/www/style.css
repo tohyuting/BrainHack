@@ -1,24 +1,43 @@
 #english {
   background-color: #F24C4E;
+  height: 50px;
+  font-size: 30px;
 }
 
 #chinese {
   background-color: #E4B126;
+  height: 50px;
+  font-size: 30px;
+  margin-top: 20px;
 }
 
 #malay {
   background-color: #1FB58F;
+  height: 50px;
+  font-size: 30px;
+  margin-top: 20px;
 }
 
 #tamil {
   background-color: #1B7B34;
+  height: 50px;
+  font-size: 30px;
+  margin-top: 20px;
 }
 
 #container {
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, 5%);
   -ms-transform: translate(-50%, 50%);
   width: 80%;
+}
+
+.toolbar {
+  background-color: #56d8b4;
+}
+
+.toolbar-button {
+   color:#ffffff;
 }

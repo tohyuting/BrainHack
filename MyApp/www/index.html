@@ -8,48 +8,55 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<ons-splitter>
-  <ons-splitter-side page="menu.html" id="menu" side="left" width="220px" collapse swipeable>
 
-  </ons-splitter-side>
-  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
-</ons-splitter>
+<ons-navigator id="myNav" page="home.html"></ons-navigator>
+
+  <template id="test2.html">
+    <ons-page>
+      <!--testing splitter-->
+      <ons-splitter>
+        <ons-splitter-side page="menu.html" id="menu" side="left" width="220px" collapse swipeable>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="test3.html"></ons-splitter-content>
+      </ons-splitter>
+
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          App Name
+        </div>
+      </ons-toolbar>
+      <p> Hello</p>
+    </ons-page>
+  </template>
+
+
 
 <template id="settings.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        Settingsasdasd
-      </div>
-    </ons-toolbar>
+
+    <!--testing splitter-->
+    <p>Hello</p>
   </ons-page>
 </template>
 
 <template id="covid.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-    </ons-toolbar>
     <ons-navigator animation="slide" swipeable id="CovidNavigator" page="CovidNews.html"></ons-navigator>
     <template id="CovidNews.html">
       <ons-page id="CovidNews">
         <ons-toolbar style="height:100px">
-          <div class="center" style="height:200%"><h1>Latest Covid News</h1></div>
+          <div class="center" style="height:200%"><h1>COVID-19 news</h1></div>
       </ons-toolbar>
       <p>Latest Covid News</p>
       <ons-list-item id="CovidFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>544 New Cases of Covid-19</ons-list-item>
       <ons-list-item id="CovidSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Most Construction Work to Resume Gradually</ons-list-item>
       <ons-list-item id="CovidThird" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Singapore’s Circuit Breaker and Beyond</ons-list-item>
-      <ons-list-item id="CovidFourth" modifier="chevron" tappable><i class='fab fa-twitter' style='font-size:30px;color:#00aced'></i>Official MOH Twitter</ons-list-item>
+      <ons-list-item id="CovidFourth" modifier="chevron" tappable><i class='fab fa-twitter' style='font-size:30px;margin-right:3%; color:#00aced'></i>Official MOH Twitter</ons-list-item>
     </ons-page>
   </template>
   </ons-page>
@@ -63,7 +70,6 @@
     </ons-toolbar>
     <div>
       <p>As of 2 June 2020, 12pm, the Ministry of Health (MOH) has preliminarily confirmed an additional 544 cases of COVID-19 infection in Singapore, the vast majority of whom are Work Permit holders residing in foreign worker dormitories. Based on our investigations so far, there are four cases in the community, of whom one is a Singaporean/Permanent Resident and three are Work Pass holders.</p>
-      <br>
       <p>We are still working through the details of the cases, and further updates will be shared via the MOH press release that will be issued tonight.</p>
       <p>Referenced from</p><a href="https://www.moh.gov.sg/news-highlights/details/544-new-cases-of-covid-19-infection">Ministry of Health</a>
     </div>
@@ -139,7 +145,8 @@
       <p>There are also specific rules for where it can be held - such as a place of worship, in the bride or groom's home or immediate family's home, or a building occupied by the Registries of Marriages or Muslim Marriages.</p>
       <p>People in charge at funeral events must take all reasonable steps to ensure that there are not more than 10 individuals attending the wake or event at any time. The usual safe distancing rules apply.</p>
       <p><strong>7. Businesses in phase 1</strong></p>
-      <p>Shops and enterprises that have resumed business must abide by newly stated obligations, such as allowing natural ventilation of the premises during working hours, having procedures and controls for assessing every visitor or customer for symptoms and refusing entry to suspected symptomatic cases.</p><p>If people who enter the shops are symptomatic cases and not wearing a mask, the business must try its best to provide the individual with a mask and require them to wear it, and to ask them to leave immediately.</p><p>Common areas must be periodically cleaned each day by law, and toilets not open to the public must be provided at all times with adequate toilet paper, liquid soap or detergent, litter bins and clean towels or hand dryers.</p>
+      <p>Shops and enterprises that have resumed business must abide by newly stated obligations, such as allowing natural ventilation of the premises during working hours, having procedures and controls for assessing every visitor or customer for symptoms and refusing entry to suspected symptomatic cases.</p><p>If people who enter the shops are symptomatic cases and not wearing a mask, the business must try its best to provide the individual with a mask and require them to wear it, and to ask them to leave immediately.</p>
+      <p>Common areas must be periodically cleaned each day by law, and toilets not open to the public must be provided at all times with adequate toilet paper, liquid soap or detergent, litter bins and clean towels or hand dryers.</p>
       <p>Disinfecting agents like hand sanitisers, disinfectant sprays, paper towels and wipes must also be provided at all times up to a point where it is reasonably practicable, for the free use of customers, visitors and employees.</p>
       <p><strong>8. Non-permitted enterprises and working from home</strong></p>
       <p>Anyone who is not a permitted enterprise worker cannot work anywhere other than from home, and only through means that do not require meeting any individual in person.</p>
@@ -156,20 +163,12 @@
       <div class="left"><ons-back-button>Back to Covid News</ons-back-button></div>
       <div class="center"></div>
     </ons-toolbar>
-    <a class="twitter-timeline" href="https://twitter.com/sporeMOH?ref_src=twsrc%5Etfw">Tweets by sporeMOH</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a class="twitter-timeline" href="https://twitter.com/sporeMOH?ref_src=twsrc%5Etfw">Tweets by @sporeMOH</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </ons-page>
 </template>
 
-
 <template id="activity-lll.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-    </ons-toolbar>
     <ons-navigator animation="slide" swipeable id="LLLNavigator" page="LLLActivities.html"></ons-navigator>
     <template id="LLLActivities.html">
       <ons-page id="LLLActivities">
@@ -243,7 +242,6 @@
         <img src="https://d33wubrfki0l68.cloudfront.net/8641b27c914b01354cb41397eef7c3271a5559d8/243fa/images/learn-online/mobile-devices.jpg" width="100%">
         <p>Learn how to use tablets and smartphones. </p>
         <ons-button width=100% onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-mobile-devices/'"> Click here to get your fingers tapping away! <ons-icon icon="fa-mobile-alt"></ons-icon></ons-button>
-
       </div>
 
       <div>
@@ -251,13 +249,9 @@
         <img src="https://d33wubrfki0l68.cloudfront.net/b4daba057250e7aa5e25b3399109b56a278c914c/00559/images/learn-online/intro-desktop.jpg" width="70%">
         <p> Online guides will familiarise you with the basic components and capabilities of a desktop computer. You will be able to learn how to use basic parts of a computer, learn how to operate different operating systems and use browsers.</p>
         <ons-button onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-desktop/'"> Click here get your brain juices flowing! <ons-icon icon="fa-desktop"></ons-icon></ons-button>
-
       </div>
 
       <p>Referenced from</p><a href="https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/overview/">Learn Online</a>
-
-
-
     </ons-page>
   </template>
   </ons-page>
@@ -265,13 +259,6 @@
 
 <template id="activity-hw.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-    </ons-toolbar>
 
     <ons-navigator animation="slide" swipeable id="HWNavigator" page="HWActivities.html"></ons-navigator>
     <template id="HWActivities.html">
@@ -298,12 +285,35 @@
 
       <div>
         <p><strong>Get Fit With Me – Overcome COVID-19</strong></p><br>
-        <ul>
-          <li>Channel 8 (weekdays 10am to 3pm)</li>
-          <li>Suria and Vasantham (Monday, Wednesday and Friday at 3.30pm)</li>
-          <li>Love 97.2 Facebook Live (Monday, Wednesday and Friday at 2pm)</li>
-        </ul>
+        <ons-row>
+          <div style="width: 150px; height: 150px; margin: auto;">
+            <img src="https://vignette.wikia.nocookie.net/logopedia/images/c/c4/Channel-8-data.jpg" style="width: 150px;">
+          </div>
 
+          <div style="width: 150px; height: 150px; margin: auto; background-color: #ec7063;">
+            <img src="https://artefakts.sg/wp02/wp-content/uploads/2019/10/events-logo-suria.jpg" style="width: 150px;">
+          </div>
+        </ons-row>
+
+        <ons-row>
+          <div style="width: 150px; margin: auto; margin-top: 0px; text-align: center;"><p>Channel 8 (weekdays 10am to 3pm)</p></div>
+          <div style="width: 150px; margin: auto; margin-top: 0px; text-align: center;"><p>Suria (Monday, Wednesday and Friday at 3.30pm)</p></div>
+        </ons-row>
+
+        <ons-row>
+          <div style="width: 150px; height: 150px; margin: auto;">
+            <img src="https://mk0thefunempireuxo6i.kinstacdn.com/wp-content/uploads/2019/05/vasantham.jpg" style="width: 150px;">
+          </div>
+
+          <div style="width: 150px; height: 150px; margin: auto; background-color: #ec7063;">
+            <img src="https://vignette.wikia.nocookie.net/logopedia/images/b/b5/Love-97-2fm-data.jpg" style="width: 150px;">
+          </div>
+        </ons-row>
+
+        <ons-row>
+          <div style="width: 150px; margin: auto; margin-top: 0px; text-align: center;"><p>Vasantham (Monday, Wednesday and Friday at 3.30pm)</p></div>
+          <div style="width: 150px; margin: auto; margin-top: 0px; text-align: center;"><p>Love 97.2 Facebook Live (Monday, Wednesday and Friday at 2pm)</p></div>
+        </ons-row>
       </div>
     </ons-page>
   </template>
@@ -361,13 +371,6 @@
 
 <template id="activity-cook.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-    </ons-toolbar>
     <ons-navigator animation="slide" swipeable id="CookNavigator" page="CookingActivities.html"></ons-navigator>
     <template id="CookingActivities.html">
       <ons-page id="CookingActivities">
@@ -403,16 +406,16 @@
             <div class="expandable-content">
               <h4>Ingredients</h4>
               <ul>
-                  <li>2 cups brown rice *</li>
+                  <li>2 cups brown rice*</li>
                   <li>200g pumpkin, cut into cubes</li>
                   <li>1 small carrot, cut into cubes</li>
                   <li>3 stalks long beans, cut into bite-sized pieces</li>
                   <li>3 fresh mushrooms, cut into cubes</li>
                   <li>1 tsp garlic, minced</li>
                   <li>2 stalks spring onion, chopped finely (optional)</li>
-                  <li>3 cups vegetable stock *</li>
-                  <li>1 tbsp oil *</li>
-                  <li>2 tbsp vegetarian oyster sauce  *</li>
+                  <li>3 cups vegetable stock*</li>
+                  <li>1 tbsp oil*</li>
+                  <li>2 tbsp vegetarian oyster sauce*</li>
                   <li>A dash of pepper</li>
               </ul>
               <p>* choose products with the Healthier Choice Symbol (HCS)</p>
@@ -481,13 +484,6 @@
 
 <template id="activity-lei.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-    </ons-toolbar>
 
     <ons-navigator animation="slide" swipeable id="LeiNavigator" page="LeiActivities.html"></ons-navigator>
     <template id="LeiActivities.html">
@@ -613,13 +609,6 @@
 
 <template id="activity-mw.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-    </ons-toolbar>
 
     <ons-navigator animation="slide" swipeable id="MWNavigator" page="MWActivities.html"></ons-navigator>
     <template id="MWActivities.html">
@@ -681,7 +670,7 @@
         <img src="https://www.healthhub.sg/sites/assets/Assets/Article%20Images/deep-breathing-exercise.png" width="100%">
         <br>
         <p>Besides the above tips, you can learn some relaxation techniques to help you cope with the stresses of everyday life.</p>
-        <p>Referenced from</p><a href="https://www.healthhub.sg/live-healthy/891/mental-wellbeing">7 Easy Tips for Better Mental Wellbeing</a>
+        <p>Referenced from</p><a href="https://www.healthhub.sg/live-healthy/891/mental-wellbeing">HealthHub</a>
       </div>
     </ons-page>
   </template>
@@ -713,6 +702,7 @@
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MGxk12mI4t8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p>All tensed up and bogged down? Loosen up and lighten up! Power down and try some muscle relaxation techniques for a restful night</p>
       </div>
+
     </ons-page>
   </template>
   </ons-page>
@@ -720,16 +710,58 @@
 
 <template id="help.html">
   <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        Help
-      </div>
+    <ons-toolbar style="height:100px">
+      <div class="center" style="height:200%"><h1>Help</h1></div>
     </ons-toolbar>
+
+    <div>
+    <p> Welcome to Help! We will be providing tips on how you can use our app! </p>
+    <div id="help1">
+      <p><strong>Navigation Bar</strong></p>
+      <h1> INSERT SCREEN SHOT OF NAVIGATION BAR HERE </h1>
+      <p> This is the navigation bar. Here, you will be able to make your way to pages where you can see the latest COVID-19 news. You will also be able to see specially curated activities from multiple categories to keep you from being idle. </p>
+    </div>
+
+    <div id="help2">
+      <p><strong>Interacting with navigation bar</strong></p>
+      <h1> INSERT SCREEN SHOT OF LANDING PAGE WITH CHEVRONS HERE </h1>
+      <p> After you click on a category in the navigation bar, you will find yourself landing on this page. Here, you will be able to explore more resources related to specific categories.</p>
+    </div>
+
+    <div id="help3">
+      <p><strong>Video Resource</strong></p>
+      <h1> INSERT SCREEN SHOT OF SAMPLE VIDEO RESOURCE HERE </h1>
+      <p> This is an example of a video resource.
+        <ul>
+          <li>To watch the YouTube video, click on the red play button.
+            <br>
+            <h1> INSERT IMAGE TO PLAY HERE </h1>
+          </li>
+          <li>To make the video expand, click on this icon.
+            <br>
+            <h1> INSERT IMAGE TO PLAY HERE </h1>
+          </li>
+          <li>To increase or decrease the volume, adjust the toggles on your device.</li>
+        </ul>
+        </p>
+    </div>
+
+    <div id="help3">
+      <p><strong>Crafting Resource</strong></p>
+      <h1> INSERT SCREEN SHOT OF LANDING PAGE WITH CHEVRONS HERE </h1>
+      <p> After you click on a category in the navigation bar, you will find yourself landing on this page. Here, you will be able to explore more resources related to specific categories.</p>
+    </div>
+
+    <div id="help4">
+      <p><strong>Why doesn't my back button work?</strong></p>
+      <h1> INSERT COLLAGE SCREEN SHOT OF ANDROID'S BACK BUTTON AND BACK BUTTON ON APP</h1>
+      <p>Do not use the back button on your Android device as this would exit the application. Use the back buttons within the application to navigate between pages instead. </p>
+    </div>
+
+
+
+
+  </div>
   </ons-page>
 </template>
 <!--
