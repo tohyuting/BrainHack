@@ -75,7 +75,15 @@ document.addEventListener('init', function(event) {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   } else if (page.id ==='feedbackChinese') {
     page.querySelector('#submitbuttonchinese').onclick = function() {
-      document.querySelector('#myNav').pushPage('ChineseHome.html', {data: {title: 'Chinese Home Page'}});
+      var values = chinesesubmit();
+      if(!values[0]) {
+        ons.notification.alert(values[1][0]);
+        return;
+      } else {
+        ons.notification.alert(values[1][0]);
+        document.querySelector('#myNav').pushPage('home.html', {data: {title: 'Chinese Home Page'}});
+        return;
+      }
     };
   }
 });
@@ -96,7 +104,6 @@ var submit = function() {
 		return false;
 	}  else {
 		ons.notification.alert("Thank you for getting in touch with us!");
-
 	}
 
 };
