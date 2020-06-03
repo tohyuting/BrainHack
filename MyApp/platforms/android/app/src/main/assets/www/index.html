@@ -9,9 +9,9 @@
 </head>
 <body>
 
-<ons-navigator id="myNav" page="home.html"></ons-navigator>
+<ons-navigator animation="slide" swipeable id="myNav" page="home.html"></ons-navigator>
 
-  <template id="test2.html">
+<template id="EnglishLanding.html">
     <ons-page>
       <!--testing splitter-->
       <ons-splitter>
@@ -31,8 +31,52 @@
         </div>
       </ons-toolbar>
       <p> Hello</p>
+      <p>I dont like this</p>
     </ons-page>
   </template>
+
+  <template id="ChineseLanding.html">
+      <ons-page>
+        <!--testing splitter-->
+        <ons-splitter>
+          <ons-splitter-side page="chiMenu.html" id="chiMenu" side="left" width="220px" collapse swipeable>
+          </ons-splitter-side>
+          <ons-splitter-content id="content" page="test4.html"></ons-splitter-content>
+        </ons-splitter>
+
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open.chinese()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">
+            App Name
+          </div>
+        </ons-toolbar>
+        <p> 华文</p>
+      </ons-page>
+    </template>
+
+  <template id="CovidNewsChinese.html">
+    <ons-page>
+      <ons-navigator animation="slide" swipeable id="CovidNavigator" page="CovidNews.html"></ons-navigator>
+      <template id="CovidNews.html">
+        <ons-page id="CovidNews">
+          <ons-toolbar style="height:100px">
+            <div class="center" style="height:200%"><h1>新冠状病毒最新资讯</h1></div>
+        </ons-toolbar>
+        <p>Latest Covid News</p>
+        <ons-list-item id="CovidFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>544 起新病例</ons-list-item>
+        <ons-list-item id="CovidSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Most Construction Work to Resume Gradually</ons-list-item>
+        <ons-list-item id="CovidThird" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Singapore’s Circuit Breaker and Beyond</ons-list-item>
+        <ons-list-item id="CovidFourth" modifier="chevron" tappable><i class='fab fa-twitter' style='font-size:30px;margin-right:3%; color:#00aced'></i>Official MOH Twitter</ons-list-item>
+      </ons-page>
+    </template>
+    </ons-page>
+  </template>
+
+
 
 
 
@@ -216,7 +260,7 @@
         <div class="center"></div>
       </ons-toolbar>
       <h3>Learn to use Zoom to stay connected with your friends and family</h3>
-      <p>Miss hanging out with your friends and family during Ciruit Breaker? Try video-conferencing with them using Zoom to <strong>keep in touch with them!</strong></p>
+      <p>Miss hanging out with your friends and family during Circuit Breaker? Try video-conferencing with them using Zoom to <strong>keep in touch with them!</strong></p>
       <br>
       <img src="https://i.insider.com/5e7240adc48540154d227dd4?width=1200&format=jpeg&auto=webp" width="100%">
       <p>Step 1:"Meet & Chat" combines the desktop "Home" and "Chat" tabs. The main options are found at the top: New Meeting, Join, Schedule, and Share Screen. Below, you'll see recent call and chat history, along with any outstanding Contact Requests. Tap to view the chat with any contact or to accept a request. You can also tap the star icon in the top-left corner to view your favorites or the pencil icon in the top-right corner to draft a new message.</p>
@@ -739,10 +783,11 @@
           </li>
           <li>To make the video expand, click on this icon.
             <br>
-            <h1> INSERT IMAGE TO PLAY HERE </h1></li>
-          <li>Milk</li>
+            <h1> INSERT IMAGE TO PLAY HERE </h1>
+          </li>
+          <li>To increase or decrease the volume, adjust the toggles on your device.</li>
         </ul>
-        T  To increase or decrease the volume, adjust the toggles on your device. </p>
+        </p>
     </div>
 
     <div id="help3">

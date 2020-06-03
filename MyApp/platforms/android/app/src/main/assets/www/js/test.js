@@ -12,6 +12,19 @@ window.fn.load = function(page) {
     .then(menu.close.bind(menu));
 };
 
+window.fn.open.chinese = function() {
+  var menu = document.getElementById('chiMenu');
+  menu.open();
+};
+
+window.fn.load.chinese = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('chiMenu');
+  content.load(page)
+    .then(menu.close.bind(menu));
+};
+
+
 document.addEventListener('init', function(event) {
   var page = event.target;
 
@@ -146,7 +159,10 @@ document.addEventListener('init', function(event) {
 
   if (page.id === 'home') {
     page.querySelector('#english').onclick = function() {
-      document.querySelector('#myNav').pushPage('test2.html', {data: {title: 'HPB Healthier Recipes'}});
+      document.querySelector('#myNav').pushPage('EnglishLanding.html', {data: {title: 'HPB Healthier Recipes'}});
+    };
+    page.querySelector('#chinese').onclick = function() {
+      document.querySelector('#myNav').pushPage('ChineseLanding.html', {data: {title: 'HPB Healthier Recipes'}});
     };
   } else if (page.id === 'CovidNews') {
     page.querySelector('#CovidFirst').onclick = function() {
