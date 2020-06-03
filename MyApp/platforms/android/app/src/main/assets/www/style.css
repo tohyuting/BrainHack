@@ -1,19 +1,24 @@
 #english {
   background-color: #F24C4E;
-  margin-left: 5%;
 }
 
 #chinese {
   background-color: #E4B126;
-  margin-left: 5%;
 }
 
 #malay {
   background-color: #1FB58F;
-  margin-left: 5%;
 }
 
 #tamil {
   background-color: #1B7B34;
-  margin-left: 5%;
+}
+
+#container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  -ms-transform: translate(-50%, 50%);
+  width: 80%;
 }

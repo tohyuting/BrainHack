@@ -34,6 +34,8 @@ document.addEventListener('init', function(event) {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   } else if (page.id === 'CovidNews3') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+  } else if (page.id === 'CovidNews4') {
+    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   }
 });
 
@@ -50,9 +52,6 @@ document.addEventListener('init', function(event) {
     };
     page.querySelector('#LLLThird').onclick = function() {
       document.querySelector('#LLLNavigator').pushPage('LLLActivity3.html', {data: {title: 'Other Digital Skills'}});
-    };
-    page.querySelector('#firstbutton').onclick = function() {
-      document.querySelector('#LLLNavigator').pushPage('LLLActivity1.html', {data: {title: 'button worked'}});
     };
   } else if (page.id === 'LLLActivity1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
@@ -140,3 +139,14 @@ document.addEventListener('init', function(event) {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   }
 });
+
+document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("backbutton", onBackKeyDown, false);
+
+function onDeviceReady() {
+  alert('deviceready')
+}
+
+function onBackKeyDown() {
+  alert('backbutton press')
+}
