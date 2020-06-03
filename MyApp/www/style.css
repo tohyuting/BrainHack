@@ -1,51 +1,68 @@
 #english {
-  background-color: #F24C4E;
-  height: 50px;
-  font-size: 30px;
+  background-color: #F24C4E !important;
+  height: 50px !important;
+  font-size: 30px !important;
+  margin-left: 0% !important;
 }
 
 #chinese {
-  background-color: #E4B126;
-  height: 50px;
-  font-size: 30px;
-  margin-top: 20px;
+  background-color: #E4B126 !important;
+  height: 50px !important;
+  font-size: 30px !important;
+  margin-top: 10px !important;
+  margin-left: 0% !important;
 }
 
 #malay {
-  background-color: #1FB58F;
-  height: 50px;
-  font-size: 30px;
-  margin-top: 20px;
+  background-color: #1FB58F !important;
+  height: 50px !important;
+  font-size: 30px !important;
+  margin-top: 10px !important;
+  margin-left: 0% !important;
 }
 
 #tamil {
-  background-color: #1B7B34;
-  height: 50px;
-  font-size: 30px;
-  margin-top: 20px;
+  background-color: #1B7B34 !important;
+  height: 50px !important;
+  font-size: 30px !important;
+  margin-top: 10px !important;
+  margin-left: 0% !important;
 }
 
 #container {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, 5%);
   -ms-transform: translate(-50%, 50%);
   width: 80%;
 }
 
-#CovidButton, #CovidNewsButton, #LLLButton {
-  background-color: purple;
+#CovidButton, #CovidNewsButton, #LLLButton, #covidbuttonChi {
+  background-color: #1B7B34;
+  margin-left: 5%;
 }
+
 
 .toolbar {
   background-color: #56d8b4;
 }
 
 .toolbar-button {
-   color:#ffffff;
+   color: #ffffff;
 }
 
 table, th, td {
   border: 1px solid black;
+  margin: 5%;
+}
+
+p,h3,li,a {
+  margin: 5%;
+  font-size: 23px;
+}
+
+.button {
+  margin: 5%;
+  font-size: 20px;
 }

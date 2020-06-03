@@ -5,11 +5,27 @@
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="js/test.js"></script>
+  <script src="js/chinese.js"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <ons-navigator animation="slide" swipeable id="myNav" page="home.html"></ons-navigator>
+
+<template id="EnglishHome.html">
+  <ons-page id="EnglishHome">
+    <p>Welcome to weLearn! Here at weLearn, we aim to entertain you with specially curated content.
+
+    <p>On the top left corner, you will see a <ons-icon icon="md-menu"></ons-icon> icon. Click on this and you will see the navigation menu.
+
+    <p>From here, you will be able to navigate to other pages. We aim to provide you with a wide variety of activities. They include online courses, online exercising resources and recipes for delicious cuisine. An example of a page you'll find yourself on after selecting a category is shown below. You will be able to listen to the content on the page if you prefer to do so.
+    <img src="https://i.ibb.co/QK1TNfN/middlenew.png" alt="middlenew" border="0" width="100%">
+
+    <p> Visit Help within the navigation menu for more information!
+  </ons-page>
+</template>
 
 <template id="EnglishLanding.html">
     <ons-page>
@@ -17,7 +33,7 @@
       <ons-splitter>
         <ons-splitter-side page="menu.html" id="menu" side="left" width="220px" collapse swipeable>
         </ons-splitter-side>
-        <ons-splitter-content id="content" page="test3.html"></ons-splitter-content>
+        <ons-splitter-content id="content" page="EnglishHome.html"></ons-splitter-content>
       </ons-splitter>
 
       <ons-toolbar>
@@ -31,38 +47,9 @@
         </div>
       </ons-toolbar>
       <!--To be filled in -->
+
     </ons-page>
   </template>
-
-  <template id="ChineseLanding.html">
-      <ons-page>
-        <!--testing splitter-->
-        <ons-splitter>
-          <ons-splitter-side page="chiMenu.html" id="chiMenu" side="left" width="220px" collapse swipeable>
-          </ons-splitter-side>
-          <ons-splitter-content id="content" page="test4.html"></ons-splitter-content>
-        </ons-splitter>
-
-        <ons-toolbar>
-          <div class="left">
-            <ons-toolbar-button onclick="fn.open.chinese()">
-              <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-          </div>
-          <div class="center">
-            App Name
-          </div>
-        </ons-toolbar>
-        <p>中文</p>
-      </ons-page>
-    </template>
-
-<template id="settings.html">
-  <ons-page>
-
-    <!--testing splitter-->
-  </ons-page>
-</template>
 
 <template id="covid.html">
   <ons-page>
@@ -278,7 +265,7 @@
 
       <div>
         <p><strong> Introduction to Desktop </strong></p>
-        <img src="https://d33wubrfki0l68.cloudfront.net/b4daba057250e7aa5e25b3399109b56a278c914c/00559/images/learn-online/intro-desktop.jpg" width="70%">
+        <img src="https://d33wubrfki0l68.cloudfront.net/b4daba057250e7aa5e25b3399109b56a278c914c/00559/images/learn-online/intro-desktop.jpg" width="100%">
         <p> Online guides will familiarise you with the basic components and capabilities of a desktop computer. You will be able to learn how to use basic parts of a computer, learn how to operate different operating systems and use browsers.</p>
         <ons-button onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-desktop/'"> Click here get your brain juices flowing! <ons-icon icon="fa-desktop"></ons-icon></ons-button>
       </div>
@@ -298,8 +285,6 @@
         <ons-toolbar style="height:100px">
           <div class="center" style="height:200%"><h1>Health & Wellness</h1></div>
       </ons-toolbar>
-
-      <p>This is the first page.</p>
       <ons-list-header>List of Activities</ons-list-header>
       <ons-list-item id="HWFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Get Fit With Me</ons-list-item>
       <ons-list-item id="HWSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>HPB Workout</ons-list-item>
@@ -427,7 +412,6 @@
           <div class="center" style="height:200%"><h1>Cooking Activities</h1></div>
       </ons-toolbar>
 
-      <p>Cooking Activities</p>
       <ons-list-header>List of Recipes</ons-list-header>
       <ons-list-item id="CookingFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>HPB Healthier Recipes</ons-list-item>
     </ons-page>
@@ -540,7 +524,6 @@
         <ons-toolbar style="height:100px">
           <div class="center" style="height:200%"><h1>Leisure</h1></div>
         </ons-toolbar>
-        <p>Leisure Activities</p>
         <ons-list-header>List of Activities</ons-list-header>
         <ons-list-item id="LeiFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Entertainment</ons-list-item>
         <ons-list-item id="LeiSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>PA e-courses</ons-list-item>
@@ -665,7 +648,6 @@
         <ons-toolbar style="height:100px">
           <div class="center" style="height:200%"><h1>Mental Wellness</h1></div>
         </ons-toolbar>
-        <p>This is the first page.</p>
         <ons-list-header>List of Activities</ons-list-header>
         <ons-list-item id="MWFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Tips for Mental Wellbeing</ons-list-item>
         <ons-list-item id="MWSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>Meditation You Can Do Anywhere</ons-list-item>
@@ -675,10 +657,6 @@
 
   <template id="MWActivity1.html">
     <ons-page id="MWActivity1">
-      <ons-toolbar>
-        <div class="left"><ons-back-button>Back to Mental Wellness Activities</ons-back-button></div>
-        <div class="center"></div>
-      </ons-toolbar>
 
       <div>
         <p>7 Easy Tips for Better Mental Wellbeing</p>
@@ -726,10 +704,6 @@
 
   <template id="MWActivity2.html">
     <ons-page id="MWActivity2">
-      <ons-toolbar>
-        <div class="left"><ons-back-button>Back to Mental Wellness Activities</ons-back-button></div>
-        <div class="center"></div>
-      </ons-toolbar>
 
       <div>
         <p><strong>5-Minute Meditation You Can Do Anywhere</strong></p>
@@ -741,10 +715,7 @@
 
   <template id="MWActivity3.html">
     <ons-page id="MWActivity3">
-      <ons-toolbar>
-        <div class="left"><ons-back-button>Back to Mental Wellness Activities</ons-back-button></div>
-        <div class="center"></div>
-      </ons-toolbar>
+
 
       <div>
         <p><strong>Progressive Muscle Relaxation</strong></p>
@@ -768,8 +739,8 @@
 
     <p>Table of Contents </p>
     <ul>
-      <li><a href="#help1">Navigation Bar</a></li>
-      <li><a href="#help2">Interacting with Navigation Bar</a></li>
+      <li><a href="#help1">Navigation Menu</a></li>
+      <li><a href="#help2">Interacting with Navigation Menu</a></li>
       <li><a href="#help3">Video Resources</a></li>
       <li><a href="#help3">Crafting Resources</a></li>
       <li><a href="#help5">Why doesn't my back button work?</a></li>
@@ -778,22 +749,22 @@
     </ul>
 
     <div id="help1">
-      <p><strong>Navigation Bar</strong></p>
+      <p><strong>Navigation Menu</strong></p>
       <ons-list-item expandable>
         Expand to see more
         <div class="expandable-content">
       <a><img src="https://i.ibb.co/0tqsbx3/navigator.png" alt="navigator" border="0" width="100%"></a>
-      <p> This is the navigation bar. Here, you will be able to make your way to pages where you can see the latest COVID-19 news. You will also be able to see specially curated activities from multiple categories to keep you from being idle. </p>
+      <p> This is the navigation menu. Here, you will be able to make your way to pages where you can see the latest COVID-19 news. You will also be able to see specially curated activities from multiple categories to keep you from being idle. </p>
     </div></ons-list-item>
     </div>
 
     <div id="help2">
-      <p><strong>Interacting with navigation bar</strong></p>
+      <p><strong>Interacting with navigation menu</strong></p>
       <ons-list-item expandable>
         Expand to see more
         <div class="expandable-content">
-      <a><img src="https://i.ibb.co/SmZF92T/middle.png" alt="middle" border="0" width="100%"></a>
-      <p> After you click on a category in the navigation bar, you will find yourself landing on this page. Here, you will be able to explore more resources related to specific categories.</p>
+      <img src="https://i.ibb.co/QK1TNfN/middlenew.png" alt="middlenew" border="0" width="100%">
+      <p> After you click on a category in the navigation menu, you will find yourself landing on this page. Here, you will be able to explore more resources related to specific categories.</p>
     </div></ons-list-item>
     </div>
 
@@ -845,7 +816,7 @@
       <ons-list-item expandable>
         Expand to see more
         <div class="expandable-content">
-      <h1> INSERT COLLAGE SCREEN SHOT OF PLAY AUDIO BUTTON</h1>
+      <img src="https://i.ibb.co/CbKWsb2/listento.png" alt="listento" border="0" width="100%">
       <p> Press on these buttons if you wish to listen to an article or a page. </p>
     </div></ons-list-item>
     </div>
@@ -863,9 +834,552 @@
   </div>
   </ons-page>
 </template>
-<!--
-<template id="about.html">
+
+<!--End of english section-->
+
+<!-- Start of Chinese Section-->
+<template id="ChineseLanding.html">
+    <ons-page>
+      <!--testing splitter-->
+      <ons-splitter>
+        <ons-splitter-side page="chiMenu.html" id="chiMenu" side="left" width="220px" collapse swipeable>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="ChineseHome.html"></ons-splitter-content>
+      </ons-splitter>
+
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open.chinese()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          weLearn
+        </div>
+      </ons-toolbar>
+
+    </ons-page>
+  </template>
+
+
+  <template id="ChineseHome.html">
+    <ons-page id="ChineseHome">
+      <p>欢迎来到 weLearn！在weLearn，我们的目标是为您提供精心策划的内容。
+
+      <p>在左上角，您将看到一个 <ons-icon icon="md-menu"></ons-icon> 图标。单击此按钮，您将会看到浏览器。
+
+      <p>从这儿，您将能够导航到其他页面。我们旨在为您提供各种各样的活动。它们包括在线课程，在线锻炼资源以及美味佳肴的食谱。选择类别后您将进入的页面示例如下所示。如您比较喜欢收听文字，您将可以收听页面上的内容。
+      <img src="https://i.ibb.co/QK1TNfN/middlenew.png" alt="middlenew" border="0" width="100%">
+
+      <p>在浏览器中访问“帮助”以获取更多信息！
+    </ons-page>
+
+  </template>
+
+<template id="CovidNewsChi.html">
+  <ons-page id="CovidNewsChi">
+          <ons-toolbar style="height:100px">
+            <div class="center" style="height:200%"><h1>新冠状病毒最新资讯</h1></div>
+        </ons-toolbar>
+        <audio id="COVIDChiAudio" src="./audio/COVIDNewsChiAudio.mp3" preload="auto"></audio>
+
+        <br><br><br>
+        <ons-button id="covidbuttonChi">听</ons-button>
+        <ons-list-item id="CovidFirstChi" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>544 起新病例</ons-list-item>
+        <ons-list-item id="CovidSecondChi" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>无证据显示冠状病毒威力减弱</ons-list-item>
+        <ons-list-item id="CovidThirdChi" modifier="chevron" tappable><i class='fab fa-twitter' style='font-size:30px;margin-right:3%; color:#00aced'></i>早报推特</ons-list-item>
+  </ons-page>
+</template>
+
+
+<template id="CovidNewsChinese1.html">
+  <ons-page id="CovidNewsChinese1">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Covid Chinese News</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <div>
+      <p>截至2020年6月2日，中午12点，卫生部（MOH）初步确认了新加坡另外544例COVID-19感染病例，其中绝大多数是持有工作准证并居住在宿舍的客工。 根据我们到目前的调查，社区中有四起案件，其中一起是新加坡人/永久居民，三起是工作准证持有者。</p>
+      <p>我们仍在研究案件的详细信息，并将通过今晚发布的卫生部新闻稿共享进一步的更新。</p>
+      <p>咨询来源：</p><a href="https://www.moh.gov.sg/news-highlights/details/544-new-cases-of-covid-19-infection">卫生部（MOH）</a>
+    </div>
+  </ons-page>
+</template>
+
+<template id="CovidNewsChinese2.html">
+  <ons-page id="CovidNewsChinese2">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Covid Chinese News</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <div>
+      <img src="https://www.zaobao.com.sg/sites/default/files/styles/article_large_full/public/images/202006/20200602/2020-04-03t194818z_1602929343_rc27xf9udp_33901364.jpg" style="width:100%">
+      <p>（早报讯）世界卫生组织专家和多名科学家均表示，没有证据显示2019冠状病毒的威力正在减弱。意大利圣拉斐尔医院院长赞格里洛此前指该病毒的致命性已大不如前。</p>
+      <p>路透社报道，世卫组织流行病学家范·科霍夫以及其他几位病毒与传染病专家说，赞格里洛的理论没有科学证据支持。他们表示，没有数据表明2019冠状病毒正在发生显著变化，无论是它的传播形式或所导致的疾病严重程度都没有明显改变。</p>
+      <p>范·科霍夫说：“就传染性而言，它没有改变；就严重程度而言，它也没有改变。”</p>
+      <p>冠病至今在全球夺走超过37万条人命，全球累计确诊病例已超过600万起。</p>
+      <p>咨询来源：</p><a href="https://www.zaobao.com.sg/realtime/world/story20200602-1058035">卫生部（MOH）</a>
+    </div>
+  </ons-page>
+</template>
+
+<template id="CovidNewsChinese3.html">
+  <ons-page id="CovidNewsChinese3">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Covid News</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <a class="twitter-timeline" href="https://twitter.com/zaobaosg?ref_src=twsrc%5Etfw">zaobaosg 早报推特</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </ons-page>
+</template>
+
+
+<template id="LLLActivitiesChinese.html">
+  <ons-page id="LLLActivitiesChinese">
+    <ons-toolbar style="height:100px">
+      <div class="center" style="height:200%"><h1>终身学习</h1></div>
+  </ons-toolbar>
+  <ons-list-header>终身学习活动</ons-list-header>
+  <ons-list-item id="LLLFirstChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>学习如何在YouTube上看视频来放松！</ons-list-item>
+  <ons-list-item id="LLLSecondChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>学习Zoom与亲朋好友联系！</ons-list-item>
+
+</ons-page>
+</template>
+
+<template id="LLLActivity1Chinese.html">
+  <ons-page id="LLLActivity1Chinese">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Lifelong Learning Activities Chinese</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <div>
+      <h3>学习如何在YouTube上看视频来放松！</h3>
+      <p>用YouTube应用（Android）</p>
+      <br>
+      <img src="https://www.wikihow.com/images/thumb/e/e7/Watch-Videos-on-YouTube-Step-26.jpg/v4-728px-Watch-Videos-on-YouTube-Step-26.jpg.webp" width="100%">
+      <p>1. 点击“YouTube”应用。 如果您还没有下载此软件，可以从 <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=en'"> Play Store <ons-icon icon="fa-google-play"></ons-icon></ons-button>下载。</p>
+      <img src="https://www.wikihow.com/images/thumb/a/ac/Watch-Videos-on-YouTube-Step-27.jpg/v4-728px-Watch-Videos-on-YouTube-Step-27.jpg.webp" width="100%">
+      <p>2. 点击手机屏幕右上角的放大镜。</p>
+      <img src="https://www.wikihow.com/images/thumb/c/c9/Watch-Videos-on-YouTube-Step-28.jpg/v4-728px-Watch-Videos-on-YouTube-Step-28.jpg.webp" width="100%">
+      <p>3. 输入搜索内容。</p>
+      <img src="https://www.wikihow.com/images/thumb/e/ef/Watch-Videos-on-YouTube-Step-29.jpg/v4-728px-Watch-Videos-on-YouTube-Step-29.jpg.webp" width="100%">
+      <p>4. 点击搜索。</p>
+      <img src="https://www.wikihow.com/images/thumb/a/a9/Watch-Videos-on-YouTube-Step-30.jpg/v4-728px-Watch-Videos-on-YouTube-Step-30.jpg.webp" width="100%">
+      <p>5. 点击你要观看的视频。它随后就会自动播放！点击视频的任何地方即可暂停，再点一下即可继续播放。</p>
+      <p>咨询来源：</p><a href="https://zh.wikihow.com/%E5%9C%A8YouTube%E4%B8%8A%E7%9C%8B%E8%A7%86%E9%A2%91">如何在YouTube上看视频</a>
+    </div>
+  </ons-page>
+</template>
+
+<template id="LLLActivity2Chinese.html">
+  <ons-page id="LLLActivity2Chinese">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Lifelong Learning Activities Chinese</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+    <div>
+      <h3>学习Zoom与亲朋好友联系！</h3>
+      <p>想念与您的朋友和家人一起出去玩吗？ 尝试使用 Zoom 与他们进行视频会议，与他们保持联系！</p>
+      <br>
+      <img src="https://zoomnow.net/img/step/pc/Q1/1-1.png" width="100%">
+      <p>1. 首先，请先下载 ZOOM APP</p>
+      <img src="https://zoomnow.net/img/step/pc/Q1/2-1.png" width="100%">
+      <p>2. 点选“加入会议”</p>
+      <img src="https://zoomnow.net/img/step/pc/Q1/3.png" width="100%">
+      <p>3. 输入会议室ID</p>
+      <img src="https://zoomnow.net/img/step/pc/Q1/4-1.png" width="100%">
+      <p>4. 输入完成即可进入会议室，开始会议</p>
+      <p>咨询来源：</p><a href="https://zoomnow.net/zntw_zoom_step_by_step.php">Zoom 操作说明</a>
+    </div>
+  </ons-page>
+</template>
+
+<template id="HWActivitiesChinese.html">
+  <ons-page id="HWActivitiesChinese">
+    <ons-toolbar style="height:100px">
+      <div class="center" style="height:200%"><h1>健康与保健</h1></div>
+  </ons-toolbar>
+  <ons-list-header>健康与保健活动</ons-list-header>
+  <ons-list-item id="HWFirstChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>HPB 7种简单的运动</ons-list-item>
+  <ons-list-item id="HWSecondChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>健康那些事 全民来防疫</ons-list-item>
+
+  </ons-page>
+</template>
+
+<template id="HWActivity1Chinese.html">
+  <ons-page id="HWActivity1Chinese">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Health & Wellness Activities Chinese</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+
+    <div>
+      <p><strong>HPB 7种简单的运动</strong></p><br>
+      <iframe width=100% height=100% src="https://www.youtube.com/embed/1Z_VH-uGKIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+      <p>做这7个简单的运动，以确保您保持健康！</p>
+    </div>
+  </ons-page>
+</template>
+
+<template id="HWActivity2Chinese.html">
+  <ons-page id="HWActivity2Chinese">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Health & Wellness Activities Chinese</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+
+    <div>
+      <p><strong>健康那些事 全民来防疫</strong></p><br>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kTM4-kcBBTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+      <p>运动即使需要减少群体活动，自己一人同样能运动！运动达人们传授各种适合乐龄人士的运动，教大家不断 keep fit 强身健体</p>
+    </div>
+
+  </ons-page>
+</template>
+
+<template id="LeiActivitiesChinese.html">
+    <ons-page id="LeiActivitiesChinese">
+      <ons-toolbar style="height:100px">
+        <div class="center" style="height:200%"><h1>休闲活动</h1></div>
+      </ons-toolbar>
+      <ons-list-header>休闲活动</ons-list-header>
+      <ons-list-item id="LeiFirstChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>娱乐</ons-list-item>
+      <ons-list-item id="LeiSecondChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>培养嗜好</ons-list-item>
+    </ons-page>
+</template>
+
+<template id="LeiActivity1Chinese.html">
+  <ons-page id="LeiActivity1Chinese">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Leisure Activities Chinese</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+
+    <div>
+      <p><strong> meWATCH </strong></p>
+      <img src="https://www.mewatch.sg/blob/12211810/7689bd5dbf288e9da686284035e2d189/mewatch-en---global-navigation-menu---to-publish-30-jan-thumbnail.svg" width="100%">
+      <p>meWATCH是一个视频的天地，观众可以免费观看内容，包括戏剧，娱乐，新闻，体育节目和现场表演； 以及新传媒合作伙伴（如HBO，tvN电影和beIN Sports）的基于订阅的内容。</p>
+      <ons-button onclick="window.location.href='https://www.mewatch.sg/en/'"> 在网络收看 <ons-icon icon="fa-tv"></ons-icon></ons-button>
+      <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=sg.mediacorp.android&hl=en_SG'"> 下载 meWATCH 应用程序 <ons-icon icon="fa-google-play"></ons-icon></ons-button>
+
+    </div>
+
+    <div>
+      <p><strong> meLISTEN </strong></p>
+      <img src="https://www.melisten.sg/static/android-icon-192x192.png" width="70%">
+      <p>meLISTEN是新传媒的免费音频服务，其目的是通过一系列创新功能提供更个性化的数字收听体验。 用户可以访问播客，精选的播放列表，并享受直播广播流，听众可以从新传媒的11个广播电台中与自己喜欢的DJ进行连接。</p>
+      <ons-button onclick="window.location.href='https://www.melisten.sg/'"> 在网络收听 <ons-icon icon="md-radio"></ons-icon></ons-button>
+      <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=net.meradio&hl=en_SG'"> 下载 meLISTEN 应用程序 <ons-icon icon="fa-google-play"></ons-icon></ons-button>
+
+    </div>
+
+    <div>
+      <p><strong> Spotify </strong></p>
+      <img src="https://www.scdn.co/i/_global/open-graph-default.png" width="100%">
+      <p>Spotify是一项音乐服务，可让您访问数百万首歌曲。</p>
+      <ons-button onclick="window.location.href='https://www.spotify.com/'"> 在网络收听 <ons-icon icon="fa-spotify"></ons-icon></ons-button>
+      <ons-button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_SG'"> 下载 Spotify 应用程序 <ons-icon icon="fa-google-play"></ons-icon></ons-button>
+    </div>
+
+
+  </ons-page>
+</template>
+
+
+<template id="LeiActivity2Chinese.html">
+  <ons-page id="LeiActivity2Chinese">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back to Leisure Activities Chinese</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+
+    <div>
+    <p><strong>刺绣花卉针法集合</strong></p><br>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6I6fM10EK-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+    <p>介绍12种刺绣花和叶子</p>
+    </div>
+
+    <div>
+    <p><strong>唱歌技巧</strong></p><br>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9pPQDAxtoYQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+    <p>成为流行歌手还不算太晚！跟着视频学习吧！</p>
+    </div>
+
+  </ons-page>
+</template>
+
+
+<template id="MWActivitiesChinese.html">
+  <ons-page id="MWActivitiesChinese">
+      <ons-toolbar style="height:100px">
+        <div class="center" style="height:200%"><h1>心理健康</h1></div>
+      </ons-toolbar>
+      <ons-list-header>心理健康</ons-list-header>
+      <ons-list-item id="MWFirstChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>压力调节术</ons-list-item>
+      <ons-list-item id="MWSecondChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>21天瑜伽冥想习练</ons-list-item>
+    </ons-page>
+</template>
+
+  <template id="MWActivity1Chinese.html">
+    <ons-page id="MWActivity1Chinese">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Mental Wellness Activities Chinese</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p>“每天起床与睡前时刻，给自己约八分钟时间…”</p>
+        <br>
+        <img src="https://s3-ap-southeast-1.amazonaws.com/c3a-java-files/202005180109444e7b4a58435a7d5005.jpg" width="100%">
+        <p>星云大师说：分享信息：新冠病毒疫情全球蔓延，影响的层面已遍布各行各业，有的人失业，有的虽然保住工作，但也默默承受着不为人知的辛苦与压力，在必要服务领域工作的员工，要面对可能染上病毒的紧张情绪，而居家办公的朋友，也要面对沟通不足、效率不高，甚至工时过长、任务太重（因为老板以为省下上下班时间的员工，有更多工作时间）的问题，无形之中也承受日趋增加的压力。</p>
+        <p>心理学家说，如感到自身压力愈趋增加，可以透过“压力调节术”来改善状况：</p>
+        <p>一、找寻生活小乐趣：我们必然有属于自己的小乐趣，例如犒赏自己在完成一个任务后吃炸鸡，又或者在工作碰到瓶颈时，放松自己看看韩剧等。这些打破日常规律的小惊喜，可以让自己放松一下。</p>
+        <p>二、诉说压力好伙伴：与人聊天说话，是消除不安和压力很有效的方法；他可能是你的家人或者朋友，你会发现原来自己并不孤单。</p>
+        <p>三、提高心理耐受力：每天起床与睡前时刻，给自己约八分钟时间，这个时间我们什么都不需要做，只要专注地觉察自己的呼吸，仔细感受每口吸气和吐气。</p>
+        <p><strong>增认知</strong></p>
+        <p>有的人感到压力太重，身心疲累，意志消沉。我们想要消除压力，首先，就要提升自己对事理认知的智慧，增加认知的力量，可以消除压力。例如在疫情期间，我们要了解什么该做，什么不该做，这样就能比较有效的预防。其次，我们要试着与压力为友，知道（疫情）无法避免，就要心甘情愿的接受它，然后告诉自己，可借机培植修养的功夫，增强自己的忍耐力、慈悲力和智慧力，试着用自己的心力承担，何必在乎压力。</p>
+        <p><strong>正视它</strong></p>
+        <p>有压力，不是什么羞耻或难堪的事，我们每个人都有适合自己的压力水平，如果压力适当，会让我们在工作时，拿出最好的表现，所以我们也要找出自己的压力水平，每天可训练“超出一点点”，这也是自我压力成长的好方式。</p>
+        <p>很多人误解了苦与压力，以为都是外来的原因所造成。其实人生要不苦，重要的是将承受压力当作是一种学习与历练，渐渐的，每一种苦遇到了我们，都能迎刃而解，自然就能乐在其中。例如：火车要有压力才能快跑，飞机要有压力才能起飞，人也要有相当的压力，生命的品质才能提昇，心灵的境界才能打开。</p>
+        <p>我们唯有正视自身压力，改善其中问题，方能安然度过每一天。但如果无法适当的调适心情，面对压力时呼吸急促无法解决，就需要进一步寻求身边朋友或是医疗资源的协助。</p>
+        <p>咨询来源：</p><a href="https://cn.c3a.org.sg/Learning_contect.do?id=16630">活跃乐龄理事会 (C3A)</a>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="MWActivity2Chinese.html">
+    <ons-page id="HWActivity2Chinese">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Health & Wellness Activities Chinese</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div>
+        <p><strong>21天瑜伽冥想习练</strong></p><br>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JztmpbP4GDM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <p>本课程为瑜伽冥想课程，通过之前体式的习练提升外在气质后，试着慢慢静下来，去观察内在的心灵，看看它是否和外在身体一样，稳定而自信。本节课程将会带你去观察，感受和体验。让你与真实自我平和相处，提升内在平和气质。</p>
+      </div>
+    </ons-page>
+  </template>
+
+  <template id="CookingActivitiesChinese.html">
+      <ons-page id="CookingActivitiesChinese">
+          <ons-toolbar style="height:100px">
+              <div class="center" style="height:200%"><h1>烹饪活动</h1></div>
+          </ons-toolbar>
+        <ons-list-header>食谱</ons-list-header>
+        <ons-list-item id="CookingFirstChinese" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">ondemand_video</i>HPB 健康食谱</ons-list-item>
+    </ons-page>
+</template>
+
+
+  <template id="CookingActivity1Chinese.html">
+      <ons-page id="CookingActivity1">
+        <ons-toolbar>
+          <div class="left"><ons-back-button>Back to Cooking Activities Chinese</ons-back-button></div>
+          <div class="center"></div>
+        </ons-toolbar>
+        <div>
+          <p><strong>鱼片米粉：健康食谱</strong></p>
+          <br>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cRZhgsIlGJg?list=PLw_CrLrIHQhViul2sBgTHhbW2R2DGrm8n" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br>
+
+          <p>您无需外出用餐就可以满足您对鱼片米粉的渴望，尝试在家中用简单食谱以享用丰盛而健康的餐点！</p>
+          <p><em>4人份，385卡路里</em></p>
+
+          <ons-list-header>食谱概要</ons-list-header>
+          <ons-list-item expandable>
+            点击更多
+            <div class="expandable-content">
+              <h4>食材</h4>
+              <ul>
+                  <li>300克托曼鱼片，切成薄片</li>
+                  <li>250克糙米米粉</li>
+                  <li>2个西红柿，切丁</li>
+                  <li>2根葱，切成5厘米长度</li>
+                  <li>10克姜，切片</li>
+                  <li>1汤匙玉米油</li>
+                  <li>1茶匙麻油</li>
+                  <li>¼杯淡奶</li>
+                  <li>4杯（1升）热水</li>
+                  <li>1汤匙鸡肉或鱼汤调味料</li>
+                  <li>胡椒粉适量</li>
+              </ul>
+
+              <ol>
+                  <li>在不粘锅中加热玉米油，炒姜片1分钟或直到香。</li>
+                  <li>倒入4杯水以及调味料。 把水煮沸。</li>
+                  <li>加入糙米米粉，鱼片，番茄，葱以及麻油。煮2分钟。</li>
+                  <li>加入淡奶和胡椒粉调味。</li>
+              </ol>
+
+        </div>
+
+        </ons-list-item>
+    </div>
+
+    <div>
+      <p><strong>萝卜汤：健康食谱</strong></p>
+      <br>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Wy2D5HAMogQ?list=PLw_CrLrIHQhViul2sBgTHhbW2R2DGrm8n" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+
+      <p>这种简单的胡萝卜汤令人放松,在下雨天会让您振作起来！</p>
+      <p><em>4人份，50卡路里</em></p>
+
+      <ons-list-header>食谱概要</ons-list-header>
+      <ons-list-item expandable>
+        点击更多
+        <div class="expandable-content">
+          <h4>食材</h4>
+          <ul>
+              <li>150克白萝卜</li>
+              <li>150克萝卜</li>
+              <li>150克橙色胡萝卜</li>
+              <li>2升水</li>
+              <li>1只鸡骨</li>
+              <li>2汤匙枸杞</li>
+              <li>1茶匙酱油</li>
+              <li>少许盐和胡椒粉调味</li>
+          </ul>
+
+          <ol>
+              <li>在沸水中将鸡骨头去皮3分钟，然后脱脂。</li>
+              <li>在一个大锅中，将水烧开，然后加入所有蔬菜和枸杞。熬50分钟。</li>
+              <li>关掉火，加入酱油，盐和胡椒粉。</li>
+              <li>热饮。</li>
+          </ol>
+          <p>*提示：将蔬菜切成相同大小，以帮助烹饪。</p>
+
+    </div>
+
+      </ons-page>
+  </template>
+
+
+  <template id="helpChinese.html">
+            <ons-page>
+              <ons-toolbar style="height:100px">
+                <div class="center" style="height:100%"><h1>帮助</h1></div>
+              </ons-toolbar>
+              <br><br>
+              <div>
+              <p> 欢迎使用帮助！ 我们将提供有关如何使用我们的应用程序的提示！ </p>
+
+              <p>目录</p>
+              <ul>
+                <li><a href="#help1chinese">导航</a></li>
+                <li><a href="#help2chinese">使用导航</a></li>
+                <li><a href="#help3chinese">视频资源</a></li>
+                <li><a href="#help3chinese">工艺资源</a></li>
+                <li><a href="#help5chinese">为什么我的后退按钮不能使用？</a></li>
+                <li><a href="#help6chinese">如何播放音频？</a></li>
+                <li><a href="#help7chinese">如何下载推荐的应用程序？</a></li>
+              </ul>
+
+              <div id="help1chinese">
+                <p><strong>导航</strong></p>
+                <ons-list-item expandable>
+                  点击更多
+                  <div class="expandable-content">
+                <a><img src="https://i.ibb.co/0tqsbx3/navigator.png" alt="navigator" border="0" width="100%"></a>
+                <p> 这是导航。 在这里，您将能够进入可以查看最新冠状病毒新闻的页面。 您还将能够查看来自多个类别的专门策划的活动，以防止您闲置。</p>
+              </div></ons-list-item>
+              </div>
+
+              <div id="help2chinese">
+                <p><strong>使用导航</strong></p>
+                <ons-list-item expandable>
+                  点击更多
+                  <div class="expandable-content">
+                <img src="https://i.ibb.co/QK1TNfN/middlenew.png" alt="middlenew" border="0" width="100%">
+                <p> 在导航中点击类别后，您将发现自己已登陆该页面。 在这里，您将能够探索与特定类别相关的更多资源。</p>
+              </div></ons-list-item>
+              </div>
+
+              <div id="help3chinese">
+                <p><strong>视频资源</strong></p>
+                <ons-list-item expandable>
+                  点击更多
+                  <div class="expandable-content">
+                <a><img src="https://i.ibb.co/sqZ76Ws/videoresource.png" alt="videoresource" border="0" width="100%"></a>
+                <p> 这是视频资源的示例。
+                  <ul>
+                    <li>要观看YouTube视频，请点击红色的播放按钮。
+                      <br>
+                      <a><img src="https://i.ibb.co/Pczjrmq/videoresource-Copy.png" alt="videoresource-Copy" border="0" width="100%"></a>
+                    </li>
+                    <li>要扩展视频，请单击此图标。
+                      <br>
+                      <a><img src="https://i.ibb.co/ccVb50R/expandvid.png" alt="expandvid" border="0" width="100%"></a>
+                    </li>
+                    <li>要增加或减少音量，请调整设备上的按钮。</li>
+                  </ul>
+                  </p>
+              </div></ons-list-item>
+
+            </div>
+
+            <div id="help4chinese">
+              <p><strong>工艺资源</strong></p>
+                <ons-list-item expandable>
+                  点击更多
+            <div class="expandable-content">
+                <a><img src="https://i.ibb.co/vhnYD7p/pdfsample.png" alt="pdfsample" border="0" width="100%"></a>
+                <p>这是工艺资源的示例。 点击后，您将被带到该资源的PDF文件，并且享受众多的艺术项目。</p>
+              </div></ons-list-item>
+            </div>
+
+            <div id="help5chinese">
+              <p><strong>为什么我的后退按钮不能使用？</strong></p>
+              <ons-list-item expandable>
+                  点击更多
+                <div class="expandable-content">
+              <a><img src="https://i.ibb.co/41Vx7zz/backbutton.png" alt="backbutton" border="0" width="100%"></a>
+              <p>请勿在安卓设备上使用后退按钮，因为这会退出应用程序。 而是使用应用程序中的后退按钮在页面之间导航。</p>
+            </div></ons-list-item>
+            </div>
+
+            <div id="help6chinese">
+              <p><strong>如何播放音频？</strong></p>
+            <ons-list-item expandable>
+                  点击更多
+            <div class="expandable-content">
+                <img src="https://i.ibb.co/CbKWsb2/listento.png" alt="listento" border="0" width="100%">
+                <p>如果您想听文章或页面，请按这些按钮。</p>
+            </div></ons-list-item>
+            </div>
+
+            <div id="help7chinese">
+            <p><strong>如何下载推荐的应用程序？</strong></p>
+            <ons-list-item expandable>
+                点击更多
+            <div class="expandable-content">
+              <a><img src="https://i.ibb.co/DYhkHvs/playstore.png" alt="playstore" border="0" width="100%"></a>
+              <p>当定向到 Play Store 时，单击“安装”以将应用程序下载到手机上。 等待应用程序完全下载，然后再打开它。</p>
+            </div></ons-list-item>
+          </div>
+        </div>
+    </ons-page>
+</template>
+<!-- Start of Chinese Section-->
+
+<!-- WIP section -->
+<template id="WIPLanding.html">
   <ons-page>
+    <!--testing splitter-->
+    <ons-splitter>
+      <ons-splitter-side page="menu.html" id="menu" side="left" width="220px" collapse swipeable>
+      </ons-splitter-side>
+      <ons-splitter-content id="content" page="wip3.html"></ons-splitter-content>
+    </ons-splitter>
+
     <ons-toolbar>
       <div class="left">
         <ons-toolbar-button onclick="fn.open()">
@@ -873,33 +1387,24 @@
         </ons-toolbar-button>
       </div>
       <div class="center">
-        About asdasd
+        weLearn
       </div>
     </ons-toolbar>
-    <p style="text-align: center; padding-top: 20px;">this is the about page test </p>
-    <p style="text-align: left">
-      <ons-button>Click me1!</ons-button>
-    </p>
-    <p style="text-align: center">
-      <ons-button>Click me2!</ons-button>
-    </p>
-    <ons-button modifier="large">large</ons-button>
-    <p>
-      <ons-icon icon="md-zoom-in"></ons-icon>
-    </p>
-    <section style="padding: 100px">
-      <ons-button modifier="quiet">quiet</ons-button>
-      <ons-button>Default</ons-button>
-      <p></p>
-      <ons-button modifier="large--quiet">large--quiet / material--flat</ons-button>
-      <p></p>
-      <ons-button modifier="large">large</ons-button>
-    </section>
-
+    <!--To be filled in -->
   </ons-page>
-</template>-->
+</template>
 
-<script src="js/test.js"></script>
-<script src="js/chinese.js"></script>
+<template id="wip3.html">
+  <ons-page id="wip3">
+    <ons-card>
+      <div class="content">
+        <img src="https://www.astons.com.sg/wp-content/uploads/2017/01/Title-ComingSoon.png" width="100%">
+        <p> This page is currently under development. We apologise for any inconvenience caused!
+        <p> Keep a look out for other new features coming in soon!
+      </div>
+    </ons-card>
+  </ons-page>
+</template>
+
 </body>
 </html>
