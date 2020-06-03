@@ -16,8 +16,8 @@ document.addEventListener('init', function(event) {
     }
   } else if (page.id === 'CovidNewsChinese1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-    page.querySelector('#CovidNewsButton').onclick = function() {
-      document.getElementById("544CasesArticle").play();
+    page.querySelector('#CovidNewsButtonChinese').onclick = function() {
+      document.getElementById("544CasesArticleChinese").play();
     }
   } else if (page.id === 'CovidNewsChinese2') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
@@ -73,5 +73,50 @@ document.addEventListener('init', function(event) {
     };
   } else if (page.id === 'CookingActivity1Chinese') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+  } else if (page.id ==='feedbackChinese') {
+    page.querySelector('#submitbuttonchinese').onclick = function() {
+      document.querySelector('#myNav').pushPage('ChineseHome.html', {data: {title: 'Chinese Home Page'}});
+    };
   }
 });
+
+var submit = function() {
+  var name = document.getElementById('name').value;
+  var feedback = document.getElementById('feedback').value;
+
+  if (name === "" && feedback === "") {
+		ons.notification.alert("Please enter your name and feedback.");
+		return false;
+	} else if (name === "") {
+		ons.notification.alert("Please enter your name.");
+		return false;
+	}
+	  else if (feedback === "") {
+		ons.notification.alert("Please enter your feedback.");
+		return false;
+	}  else {
+		ons.notification.alert("Thank you for getting in touch with us!");
+
+	}
+
+};
+
+var chinesesubmit = function() {
+  var chinesename = document.getElementById('chinesename').value;
+  var chinesefeedback = document.getElementById('chinesefeedback').value;
+
+  if (chinesename === "" && chinesefeedback === "") {
+		ons.notification.alert("请输入您的姓名和反馈。");
+		return false;
+	} else if (chinesename === "") {
+		ons.notification.alert("请输入您的姓名。");
+		return false;
+	}
+	  else if (chinesefeedback === "") {
+		ons.notification.alert("请输入您的反馈。");
+		return false;
+	}  else {
+		ons.notification.alert("感谢您与我们联系！");
+	}
+
+};

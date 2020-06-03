@@ -16,6 +16,8 @@
 
 <template id="EnglishHome.html">
   <ons-page id="EnglishHome">
+    <audio id="EnglishHomeAudio" src="./audio/EnglishLanding.mp3" preload="auto"></audio>
+    <ons-button id="EnglishHomeButton">Listen to page</ons-button>
     <p>Welcome to weLearn! Here at weLearn, we aim to entertain you with specially curated content.
 
     <p>On the top left corner, you will see a <ons-icon icon="md-menu"></ons-icon> icon. Click on this and you will see the navigation menu.
@@ -208,7 +210,7 @@
         <div class="center"></div>
       </ons-toolbar>
       <div>
-        <h3>Learn how to use Youtube to keep yourself entertained!</h3>
+        <p><strong>Learn how to use Youtube to keep yourself entertained!</strong></p>
         <p>Feeling <strong>bored</strong> at home? Fear not! Learn how to use Youtube to keep yourself occupied during COVID-19</p>
         <br>
         <img src="https://www.wikihow.com/images/thumb/6/6a/Play-YouTube-Videos-Step-6.jpg/aid2010014-v4-728px-Play-YouTube-Videos-Step-6.jpg.webp" width="100%">
@@ -233,7 +235,7 @@
         <div class="center"></div>
       </ons-toolbar>
       <div>
-        <h3>Learn to use Zoom to stay connected with your friends and family</h3>
+        <p><strong>Learn to use Zoom to stay connected with your friends and family</strong></p>
         <p>Miss hanging out with your friends and family during Circuit Breaker? Try video-conferencing with them using Zoom to <strong>keep in touch with them!</strong></p>
         <br>
         <img src="https://i.insider.com/5e7240adc48540154d227dd4?width=1200&format=jpeg&auto=webp" width="100%">
@@ -260,14 +262,14 @@
         <p><strong> Introduction to Mobile Devices </strong></p>
         <img src="https://d33wubrfki0l68.cloudfront.net/8641b27c914b01354cb41397eef7c3271a5559d8/243fa/images/learn-online/mobile-devices.jpg" width="100%">
         <p>Learn how to use tablets and smartphones. </p>
-        <ons-button width=100% onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-mobile-devices/'"> Click here to get your fingers tapping away! <ons-icon icon="fa-mobile-alt"></ons-icon></ons-button>
+        <ons-button width=100% onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-mobile-devices/'"> Click to learn more! <ons-icon icon="fa-mobile-alt"></ons-icon></ons-button>
       </div>
 
       <div>
         <p><strong> Introduction to Desktop </strong></p>
         <img src="https://d33wubrfki0l68.cloudfront.net/b4daba057250e7aa5e25b3399109b56a278c914c/00559/images/learn-online/intro-desktop.jpg" width="100%">
         <p> Online guides will familiarise you with the basic components and capabilities of a desktop computer. You will be able to learn how to use basic parts of a computer, learn how to operate different operating systems and use browsers.</p>
-        <ons-button onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-desktop/'"> Click here get your brain juices flowing! <ons-icon icon="fa-desktop"></ons-icon></ons-button>
+        <ons-button onclick="window.location.href='https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/introduction-to-desktop/'"> Click to learn more! <ons-icon icon="fa-desktop"></ons-icon></ons-button>
       </div>
 
       <p>Referenced from</p><a href="https://imsilver.imda.gov.sg/learn-digital-skills/learn-online/overview/">Learn Online</a>
@@ -657,7 +659,10 @@
 
   <template id="MWActivity1.html">
     <ons-page id="MWActivity1">
-
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
       <div>
         <p>7 Easy Tips for Better Mental Wellbeing</p>
         <br>
@@ -704,7 +709,10 @@
 
   <template id="MWActivity2.html">
     <ons-page id="MWActivity2">
-
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
       <div>
         <p><strong>5-Minute Meditation You Can Do Anywhere</strong></p>
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/inpok4MKVLM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -715,7 +723,10 @@
 
   <template id="MWActivity3.html">
     <ons-page id="MWActivity3">
-
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back to Leisure Activities</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
 
       <div>
         <p><strong>Progressive Muscle Relaxation</strong></p>
@@ -835,6 +846,24 @@
   </ons-page>
 </template>
 
+<template id="feedback.html">
+  <ons-page>
+    <ons-page>
+      <div style="text-align: center; margin-top: 30%;">
+        <p>
+          <textarea class="textarea" id="name" style="background-color:#ffffff" rows="1" placeholder="Name"></textarea>
+        </p>
+        <p>
+          <textarea class="textarea" id="feedback" style="background-color:#ffffff" rows="5" placeholder="Feedback"></textarea>
+        </p>
+        <p style="margin-top: 5%;">
+          <ons-button id="submitbutton" onclick="submit()">Submit</ons-button>
+        </p>
+      </div>
+</ons-page>
+  </ons-page>
+</template>
+
 <!--End of english section-->
 
 <!-- Start of Chinese Section-->
@@ -857,24 +886,30 @@
           weLearn
         </div>
       </ons-toolbar>
-
     </ons-page>
-  </template>
+</template>
 
 
-  <template id="ChineseHome.html">
-    <ons-page id="ChineseHome">
+<template id="ChineseHome.html">
+  <ons-page id="ChineseHome">
+
+    <audio id="ChineseHomeAudio" src="./audio/ChineseLanding.mp3" preload="auto"></audio>
+    <ons-button id="ChineseHomeButton">华语</ons-button>
+    <ons-button id="ChineseHomeButton">闽南语</ons-button><br>
+    <ons-button id="ChineseHomeButton">粤语</ons-button>
+    <ons-button id="ChineseHomeButton">海南话</ons-button>
       <p>欢迎来到 weLearn！在weLearn，我们的目标是为您提供精心策划的内容。
 
       <p>在左上角，您将看到一个 <ons-icon icon="md-menu"></ons-icon> 图标。单击此按钮，您将会看到浏览器。
 
       <p>从这儿，您将能够导航到其他页面。我们旨在为您提供各种各样的活动。它们包括在线课程，在线锻炼资源以及美味佳肴的食谱。选择类别后您将进入的页面示例如下所示。如您比较喜欢收听文字，您将可以收听页面上的内容。
-      <img style="margin-left:0% !important;" src="https://i.ibb.co/QK1TNfN/middlenew.png" alt="middlenew" border="0" width="100%">
+      <!-- <img style="margin-left:0% !important; width:100% !important;" src="https://i.ibb.co/QK1TNfN/middlenew.png" alt="middlenew"> -->
+      <img src="https://i.ibb.co/QK1TNfN/middlenew.png" width="100%">
 
-      <p>在浏览器中访问“帮助”以获取更多信息！
-    </ons-page>
+      <p>您也可以在浏览器中访问“帮助”以获取更多信息！
+  </ons-page>
+</template>
 
-  </template>
 
 <template id="CovidNewsChi.html">
   <ons-page id="CovidNewsChi">
@@ -884,7 +919,10 @@
         <audio id="COVIDChiAudio" src="./audio/COVIDNewsChiAudio.mp3" preload="auto"></audio>
 
         <br><br><br>
-        <ons-button id="covidbuttonChi">听</ons-button>
+        <ons-button id="covidbuttonChi">华语</ons-button>
+        <ons-button id="ChineseHomeButton">闽南语</ons-button><br>
+        <ons-button id="ChineseHomeButton">粤语</ons-button>
+        <ons-button id="ChineseHomeButton">海南话</ons-button>
         <ons-list-item id="CovidFirstChi" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>544 起新病例</ons-list-item>
         <ons-list-item id="CovidSecondChi" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>无证据显示冠状病毒威力减弱</ons-list-item>
         <ons-list-item id="CovidThirdChi" modifier="chevron" tappable><i class='fab fa-twitter' style='font-size:30px;margin-right:3%; color:#00aced'></i>早报推特</ons-list-item>
@@ -898,6 +936,13 @@
       <div class="left"><ons-back-button>Back to Covid Chinese News</ons-back-button></div>
       <div class="center"></div>
     </ons-toolbar>
+    <br>
+    <audio id="544CasesArticleChinese" src="./audio/544NewCasesArticleChinese.mp3" preload="auto"></audio>
+    <ons-button id="CovidNewsButtonChinese">华语</ons-button>
+    <ons-button id="ChineseHomeButton">闽南语</ons-button><br>
+    <ons-button id="ChineseHomeButton">粤语</ons-button>
+    <ons-button id="ChineseHomeButton">海南话</ons-button>
+
     <div>
       <p>截至2020年6月2日，中午12点，卫生部（MOH）初步确认了新加坡另外544例COVID-19感染病例，其中绝大多数是持有工作准证并居住在宿舍的客工。 根据我们到目前的调查，社区中有四起案件，其中一起是新加坡人/永久居民，三起是工作准证持有者。</p>
       <p>我们仍在研究案件的详细信息，并将通过今晚发布的卫生部新闻稿共享进一步的更新。</p>
@@ -953,7 +998,7 @@
       <div class="center"></div>
     </ons-toolbar>
     <div>
-      <h3>学习如何在YouTube上看视频来放松！</h3>
+      <p><strong>学习如何在YouTube上看视频来放松！</strong></p>
       <p>用YouTube应用（Android）</p>
       <br>
       <img src="https://www.wikihow.com/images/thumb/e/e7/Watch-Videos-on-YouTube-Step-26.jpg/v4-728px-Watch-Videos-on-YouTube-Step-26.jpg.webp" width="100%">
@@ -978,7 +1023,7 @@
       <div class="center"></div>
     </ons-toolbar>
     <div>
-      <h3>学习Zoom与亲朋好友联系！</h3>
+      <p><strong>学习Zoom与亲朋好友联系！</strong></p>
       <p>想念与您的朋友和家人一起出去玩吗？ 尝试使用 Zoom 与他们进行视频会议，与他们保持联系！</p>
       <br>
       <img src="https://zoomnow.net/img/step/pc/Q1/1-1.png" width="100%">
@@ -1368,7 +1413,24 @@
         </div>
     </ons-page>
 </template>
-<!-- Start of Chinese Section-->
+
+
+<template id="feedbackChinese.html">
+  <ons-page id="feedbackChinese">
+    <div style="text-align: center; margin-top: 30%;">
+        <p>
+          <textarea class="textarea" id="chinesename" style="background-color:#ffffff" rows="1" placeholder="姓名"></textarea>
+        </p>
+        <p>
+          <textarea class="textarea" id="chinesefeedback" style="background-color:#ffffff" rows="5" placeholder="请输入您的反馈"></textarea>
+        </p>
+        <p style="margin-top: 5%;">
+          <ons-button id="submitbuttonchinese" onclick="chinesesubmit()">提交</ons-button>
+        </p>
+    </div>
+  </ons-page>
+</template>
+<!-- End of Chinese Section-->
 
 <!-- WIP section -->
 <template id="WIPLanding.html">

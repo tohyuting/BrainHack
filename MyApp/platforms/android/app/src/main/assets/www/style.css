@@ -26,7 +26,7 @@
   height: 50px !important;
   font-size: 30px !important;
   margin-top: 10px !important;
-  margin-left: 0% !important;
+  margin: 0% !important;
 }
 
 #container {
@@ -38,7 +38,7 @@
   width: 80%;
 }
 
-#CovidButton, #CovidNewsButton, #LLLButton, #covidbuttonChi {
+#CovidButton, #CovidNewsButton, #LLLButton, #covidbuttonChi, #EnglishHomeButton, #ChineseHomeButton, #covidbuttonChi, #CovidNewsButtonChinese {
   background-color: #1B7B34;
   margin-left: 5%;
 }
@@ -54,10 +54,9 @@
 
 table, th, td {
   border: 1px solid black;
-  margin: 5%;
 }
 
-p,h3,li,a {
+p,li,a {
   margin: 5%;
   font-size: 23px;
 }
@@ -65,4 +64,18 @@ p,h3,li,a {
 .button {
   margin: 5%;
   font-size: 20px;
+}
+
+#submitbuttonchinese {
+  background-color: #F24C4E !important;
+  height: 30px !important;
+  font-size: 20px !important;
+  margin-left: 0% !important;
+}
+
+#submitbutton {
+  background-color: #F24C4E !important;
+  height: 30px !important;
+  font-size: 20px !important;
+  margin-left: 0% !important;
 }

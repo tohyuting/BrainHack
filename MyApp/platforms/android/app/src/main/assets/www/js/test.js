@@ -158,17 +158,19 @@ document.addEventListener('init', function(event) {
 
   if (page.id === 'home') {
     page.querySelector('#english').onclick = function() {
-      document.querySelector('#myNav').pushPage('EnglishLanding.html', {data: {title: 'HPB Healthier Recipes'}});
+      document.querySelector('#myNav').pushPage('EnglishLanding.html', {data: {title: 'English Home Page'}});
     };
     page.querySelector('#chinese').onclick = function() {
-      document.querySelector('#myNav').pushPage('ChineseLanding.html', {data: {title: 'HPB Healthier Recipes'}});
+      document.querySelector('#myNav').pushPage('ChineseLanding.html', {data: {title: 'Chinese Home Page'}});
     };
-    page.querySelector('#tamil').onclick = function() {
-          document.querySelector('#myNav').pushPage('WIPLanding.html', {data: {title: 'HPB Healthier Recipes'}});
-    };
-    page.querySelector('#malay').onclick = function() {
-          document.querySelector('#myNav').pushPage('WIPLanding.html', {data: {title: 'HPB Healthier Recipes'}});
-    };
+  } else if (page.id === 'EnglishHome') {
+    page.querySelector('#EnglishHomeButton').onclick = function() {
+      document.getElementById("EnglishHomeAudio").play();
+    }
+  } else if (page.id === 'ChineseHome') {
+    page.querySelector('#ChineseHomeButton').onclick = function() {
+      document.getElementById("ChineseHomeAudio").play();
+    }
   } else if (page.id === 'CovidNews') {
     page.querySelector('#CovidFirst').onclick = function() {
       document.querySelector('#myNav').pushPage('CovidNews1.html', {data: {title: 'New Cases of Covid-19'}});
@@ -246,17 +248,6 @@ document.addEventListener('init', function(event) {
   } else if (page.id === 'MWActivity2') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   } else if (page.id === 'MWActivity3') {
-    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-  } else if (page.id === 'MWActivitiesChinese') {
-    page.querySelector('#MWFirstChinese').onclick = function() {
-      document.querySelector('#myNav').pushPage('MWActivity1.html', {data: {title: 'Tips for Mental Wellbeing'}});
-    };
-    page.querySelector('#MWSecondChinese').onclick = function() {
-      document.querySelector('#myNav').pushPage('MWActivity2.html', {data: {title: 'Meditation Video'}});
-    };
-  } else if (page.id === 'MWActivity1Chinese') {
-    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-  } else if (page.id === 'MWActivity2Chinese') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   } else if (page.id === 'LeiActivities') {
     page.querySelector('#LeiFirst').onclick = function() {
