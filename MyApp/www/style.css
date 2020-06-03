@@ -34,10 +34,18 @@
   width: 80%;
 }
 
+#CovidButton, #CovidNewsButton, #LLLButton {
+  background-color: purple;
+}
+
 .toolbar {
   background-color: #56d8b4;
 }
 
 .toolbar-button {
    color:#ffffff;
+}
+
+table, th, td {
+  border: 1px solid black;
 }

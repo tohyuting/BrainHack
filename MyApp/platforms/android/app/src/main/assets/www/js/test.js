@@ -24,7 +24,6 @@ window.fn.load.chinese = function(page) {
     .then(menu.close.bind(menu));
 };
 
-
 document.addEventListener('init', function(event) {
   var page = event.target;
 
@@ -177,8 +176,14 @@ document.addEventListener('init', function(event) {
     page.querySelector('#CovidFourth').onclick = function() {
       document.querySelector('#myNav').pushPage('CovidNews4.html', {data: {title: 'Official MOH Twitter'}});
     };
+    page.querySelector('#CovidButton').onclick = function() {
+      document.getElementById('COVIDNewsAudio').play();
+    }
   } else if (page.id === 'CovidNews1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+    page.querySelector('#CovidNewsButton').onclick = function() {
+      document.getElementById("544CasesArticle").play();
+    }
   } else if (page.id === 'CovidNews2') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   } else if (page.id === 'CovidNews3') {
@@ -195,6 +200,9 @@ document.addEventListener('init', function(event) {
     page.querySelector('#LLLThird').onclick = function() {
       document.querySelector('#myNav').pushPage('LLLActivity3.html', {data: {title: 'Other Digital Skills'}});
     };
+    page.querySelector('#LLLButton').onclick = function() {
+      document.getElementById('LLLNewsAudio').play();
+    }
   } else if (page.id === 'LLLActivity1') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   } else if (page.id === 'LLLActivity2') {

@@ -53,7 +53,7 @@
             App Name
           </div>
         </ons-toolbar>
-        <p> 华文</p>
+        <p>中文</p>
       </ons-page>
     </template>
 
@@ -72,10 +72,13 @@
         <ons-toolbar style="height:100px">
           <div class="center" style="height:200%"><h1>COVID-19 news</h1></div>
       </ons-toolbar>
-      <p>Latest Covid News</p>
-      <ons-list-item id="CovidFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>544 New Cases of Covid-19</ons-list-item>
-      <ons-list-item id="CovidSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Most Construction Work to Resume Gradually</ons-list-item>
-      <ons-list-item id="CovidThird" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Singapore’s Circuit Breaker and Beyond</ons-list-item>
+      <audio id="COVIDNewsAudio" src="./audio/COVIDNewsAudio.mp3" preload="auto"></audio>
+
+      <br><br><br>
+      <ons-button id="CovidButton">Listen to page</ons-button>
+      <ons-list-item id="CovidFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>544 New COVID-19 Cases</ons-list-item>
+      <ons-list-item id="CovidSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Construction Work to Resume</ons-list-item>
+      <ons-list-item id="CovidThird" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Circuit Breaker and Beyond</ons-list-item>
       <ons-list-item id="CovidFourth" modifier="chevron" tappable><i class='fab fa-twitter' style='font-size:30px;margin-right:3%; color:#00aced'></i>Official MOH Twitter</ons-list-item>
     </ons-page>
   </template>
@@ -88,6 +91,9 @@
       <div class="left"><ons-back-button>Back to Covid News</ons-back-button></div>
       <div class="center"></div>
     </ons-toolbar>
+    <br>
+    <audio id="544CasesArticle" src="./audio/544NewCasesArticle.mp3" preload="auto"></audio>
+    <ons-button id="CovidNewsButton">Listen to Article</ons-button>
     <div>
       <p>As of 2 June 2020, 12pm, the Ministry of Health (MOH) has preliminarily confirmed an additional 544 cases of COVID-19 infection in Singapore, the vast majority of whom are Work Permit holders residing in foreign worker dormitories. Based on our investigations so far, there are four cases in the community, of whom one is a Singaporean/Permanent Resident and three are Work Pass holders.</p>
       <p>We are still working through the details of the cases, and further updates will be shared via the MOH press release that will be issued tonight.</p>
@@ -195,10 +201,14 @@
         <ons-toolbar style="height:100px">
           <div class="center" style="height:200%"><h1>Lifelong Learning</h1></div>
       </ons-toolbar>
-      <p>Lifelong Learning Activities</p>
+      <audio id="LLLNewsAudio" src="./audio/LLLNewsAudio.mp3" preload="auto"></audio>
+
+      <br><br><br>
+      <ons-button id="LLLButton">Listen to page</ons-button>
+      <br><br>
       <ons-list-header>List of Activities</ons-list-header>
-      <ons-list-item id="LLLFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Learn how to use Youtube to keep yourself occupied during COVID-19</ons-list-item>
-      <ons-list-item id="LLLSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Learn to use Zoom to stay connected with your friends and family</ons-list-item>
+      <ons-list-item id="LLLFirst" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Learn how to use Youtube</ons-list-item>
+      <ons-list-item id="LLLSecond" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Learn to use Zoom</ons-list-item>
       <ons-list-item id="LLLThird" modifier="chevron" tappable><i class="material-icons" style="font-size:30px; margin-right:3%">library_books</i>Learn more digital skills online</ons-list-item>
 
     </ons-page>
@@ -307,7 +317,7 @@
 
       <div>
         <p><strong>Get Fit With Me – Overcome COVID-19</strong></p><br>
-        <p> Tap on the image to watch live! <p><br>
+        <div>Tap on the images to watch LIVE!</div><br>
         <ons-row>
           <div style="width: 150px; height: 150px; margin: auto;">
             <a href="https://www.mewatch.sg/en/channels/channel-8/260581">
@@ -755,50 +765,100 @@
     <br><br>
     <div>
     <p> Welcome to Help! We will be providing tips on how you can use our app! </p>
+
+    <p>Table of Contents </p>
+    <ul>
+      <li><a href="#help1">Navigation Bar</a></li>
+      <li><a href="#help2">Interacting with Navigation Bar</a></li>
+      <li><a href="#help3">Video Resources</a></li>
+      <li><a href="#help3">Crafting Resources</a></li>
+      <li><a href="#help5">Why doesn't my back button work?</a></li>
+      <li><a href="#help6">How to play audio?</a></li>
+      <li><a href="#help7">How do I download a recommended application?</a></li>
+    </ul>
+
     <div id="help1">
       <p><strong>Navigation Bar</strong></p>
-      <h1> INSERT SCREEN SHOT OF NAVIGATION BAR HERE </h1>
+      <ons-list-item expandable>
+        Expand to see more
+        <div class="expandable-content">
+      <a><img src="https://i.ibb.co/0tqsbx3/navigator.png" alt="navigator" border="0" width="100%"></a>
       <p> This is the navigation bar. Here, you will be able to make your way to pages where you can see the latest COVID-19 news. You will also be able to see specially curated activities from multiple categories to keep you from being idle. </p>
+    </div></ons-list-item>
     </div>
 
     <div id="help2">
       <p><strong>Interacting with navigation bar</strong></p>
-      <h1> INSERT SCREEN SHOT OF LANDING PAGE WITH CHEVRONS HERE </h1>
+      <ons-list-item expandable>
+        Expand to see more
+        <div class="expandable-content">
+      <a><img src="https://i.ibb.co/SmZF92T/middle.png" alt="middle" border="0" width="100%"></a>
       <p> After you click on a category in the navigation bar, you will find yourself landing on this page. Here, you will be able to explore more resources related to specific categories.</p>
+    </div></ons-list-item>
     </div>
 
     <div id="help3">
       <p><strong>Video Resource</strong></p>
-      <h1> INSERT SCREEN SHOT OF SAMPLE VIDEO RESOURCE HERE </h1>
+      <ons-list-item expandable>
+        Expand to see more
+        <div class="expandable-content">
+      <a><img src="https://i.ibb.co/sqZ76Ws/videoresource.png" alt="videoresource" border="0" width="100%"></a>
       <p> This is an example of a video resource.
         <ul>
           <li>To watch the YouTube video, click on the red play button.
             <br>
-            <h1> INSERT IMAGE TO PLAY HERE </h1>
+            <a><img src="https://i.ibb.co/Pczjrmq/videoresource-Copy.png" alt="videoresource-Copy" border="0" width="100%"></a>
           </li>
           <li>To make the video expand, click on this icon.
             <br>
-            <h1> INSERT IMAGE TO PLAY HERE </h1>
+            <a><img src="https://i.ibb.co/ccVb50R/expandvid.png" alt="expandvid" border="0" width="100%"></a>
           </li>
           <li>To increase or decrease the volume, adjust the toggles on your device.</li>
         </ul>
         </p>
-    </div>
+      </div></ons-list-item>
 
-    <div id="help3">
-      <p><strong>Crafting Resource</strong></p>
-      <h1> INSERT SCREEN SHOT OF LANDING PAGE WITH CHEVRONS HERE </h1>
-      <p> After you click on a category in the navigation bar, you will find yourself landing on this page. Here, you will be able to explore more resources related to specific categories.</p>
     </div>
 
     <div id="help4">
-      <p><strong>Why doesn't my back button work?</strong></p>
-      <h1> INSERT COLLAGE SCREEN SHOT OF ANDROID'S BACK BUTTON AND BACK BUTTON ON APP</h1>
-      <p>Do not use the back button on your Android device as this would exit the application. Use the back buttons within the application to navigate between pages instead. </p>
+      <p><strong>Crafting Resource</strong></p>
+      <ons-list-item expandable>
+        Expand to see more
+        <div class="expandable-content">
+      <a><img src="https://i.ibb.co/vhnYD7p/pdfsample.png" alt="pdfsample" border="0" width="100%"></a>
+      <p> This is an example of a crafting resource. When clicked, you will be directed to a PDF file of the resource and you will be able to enjoy numerous art projects. </p>
+    </div></ons-list-item>
     </div>
 
+    <div id="help5">
+      <p><strong>Why doesn't my back button work?</strong></p>
+      <ons-list-item expandable>
+        Expand to see more
+        <div class="expandable-content">
+      <a><img src="https://i.ibb.co/41Vx7zz/backbutton.png" alt="backbutton" border="0" width="100%"></a>
+      <p>Do not use the back button on your Android device as this would exit the application. Use the back buttons within the application to navigate between pages instead. </p>
+    </div></ons-list-item>
+    </div>
 
+    <div id="help6">
+      <p><strong>How to play audio?</strong></p>
+      <ons-list-item expandable>
+        Expand to see more
+        <div class="expandable-content">
+      <h1> INSERT COLLAGE SCREEN SHOT OF PLAY AUDIO BUTTON</h1>
+      <p> Press on these buttons if you wish to listen to an article or a page. </p>
+    </div></ons-list-item>
+    </div>
 
+    <div id="help7">
+      <p><strong>How do I download a recommended application? </strong></p>
+      <ons-list-item expandable>
+        Expand to see more
+        <div class="expandable-content">
+      <a><img src="https://i.ibb.co/DYhkHvs/playstore.png" alt="playstore" border="0" width="100%"></a>
+      <p>When directed to the Play Store, click install to download the application on your phone. Wait for the application to download fully before you open it. </p>
+    </div></ons-list-item>
+    </div>
 
   </div>
   </ons-page>
@@ -840,5 +900,6 @@
 </template>-->
 
 <script src="js/test.js"></script>
+<script src="js/chinese.js"></script>
 </body>
 </html>
