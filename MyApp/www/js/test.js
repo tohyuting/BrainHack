@@ -163,6 +163,12 @@ document.addEventListener('init', function(event) {
     page.querySelector('#chinese').onclick = function() {
       document.querySelector('#myNav').pushPage('ChineseLanding.html', {data: {title: 'Chinese Home Page'}});
     };
+    page.querySelector('#malay').onclick = function() {
+      document.querySelector('#myNav').pushPage('wip3.html', {data: {title: 'English Home Page'}});
+    };
+    page.querySelector('#tamil').onclick = function() {
+      document.querySelector('#myNav').pushPage('wip3.html', {data: {title: 'English Home Page'}});
+    };
   } else if (page.id === 'EnglishHome') {
     page.querySelector('#EnglishHomeButton').onclick = function() {
       document.getElementById("EnglishHomeAudio").play();

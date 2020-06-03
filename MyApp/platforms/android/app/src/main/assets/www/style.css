@@ -5,16 +5,16 @@
   margin-left: 0% !important;
 }
 
-#chinese {
-  background-color: #E4B126 !important;
+#malay {
+  background-color: #1FB58F !important;
   height: 50px !important;
   font-size: 30px !important;
   margin-top: 10px !important;
   margin-left: 0% !important;
 }
 
-#malay {
-  background-color: #1FB58F !important;
+#chinese {
+  background-color: #E4B126 !important;
   height: 50px !important;
   font-size: 30px !important;
   margin-top: 10px !important;
@@ -25,7 +25,7 @@
   background-color: #1B7B34 !important;
   height: 50px !important;
   font-size: 30px !important;
-  margin-top: 10px !important;
+  margin-top: 15px !important;
   margin: 0% !important;
 }
 
